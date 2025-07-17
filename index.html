@@ -89,6 +89,19 @@
       -webkit-animation-duration: 2s;
       animation-duration: 2s;
     }
+    .flex-list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 20px; /* optional */
+    }
+
+    .flex-list li {
+      flex: 0 0 calc(100% / 3 - 10px); /* For 3 columns, adjust as needed */
+      box-sizing: border-box;
+    }
     </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7V30JD7GE9"></script>
@@ -107,49 +120,43 @@
       </div>
       <div class="py-12">
         <div class="mx-auto max-w-7xl">
-          <ul role="list" class="mx-auto mt-20 grid max-w-2xl">
-            <li>
-              <img style="display: none;" class="h-64 w-64 rounded-full object-cover" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
-              <ul role="list" class="mt-6 flex justify-center flex-col">
+              <ul role="list" class="flex-list mt-6 flex justify-center">
                 <li>
                   ATLAS
                   <ul role="list" class="flex justify-center flex-col">
                     <li class="text-xs">
                       re-writing
                       <div class="w3-light-grey">
-                        <div class="w3-container w3-red w3-center text-xs" style="height:14px; width:0%">0%</div>
+                        <div class="w3-container w3-red w3-center text-xs" style="height:2px; width:0%">0%</div>
                       </div>
                     </li>
                   </ul>
                 </li>
-                <li>&#9867;</li>
                 <li>
-                  AV: <em>Crystal Children</em>
+                  AV | <em>Crystal Children</em>
                   <ul role="list" class="flex justify-center flex-col">
                     <li class="text-xs">
                       writing
                       <div class="w3-light-grey">
-                        <div class="w3-container w3-orange w3-center text-xs" style="height:14px; width:10%">10%</div>
+                        <div class="w3-container w3-orange w3-center text-xs" style="height:2px; width:10%">10%</div>
                       </div>
                     </li>
                   </ul>
                 </li>
-                <li>&#9867;</li>
                 <li>
                   Teteo
                   <ul role="list" class="flex justify-center flex-col">
                     <li class="text-xs">
                       writing
                       <div class="w3-light-grey">
-                        <div class="w3-container w3-green w3-center text-xs" style="height:14px; width:100%">100%</div>
+                        <div class="w3-container w3-green w3-center text-xs" style="height:2px; width:100%">100%</div>
                       </div>
                     </li>
                   </ul>
                 </li>
-                <li>&#9867;</li>
                 <li>
                   <a href="waves.pdf">
-                    Waves | Echoes in The Sea
+                    Waves | <em>Echoes in The Sea</em>
                     <svg class="inline h-4"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
                     </svg>
@@ -158,15 +165,14 @@
                     <li class="text-xs">
                       writing
                       <div class="w3-light-grey">
-                        <div class="w3-container w3-green w3-center text-xs" style="height:14px; width:100%">100%</div>
+                        <div class="w3-container w3-green w3-center text-xs" style="height:2px; width:100%">100%</div>
                       </div>
                     </li>
                   </ul>
                 </li>
-                <li>&#9867;</li>
                 <li>
                   <a href="medea.pdf">
-                    Medea | As Above So Below
+                    Medea | <em>As Above So Below</em>
                     <svg class="inline h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
                     </svg>
@@ -175,27 +181,25 @@
                     <li class="text-xs">
                       writing
                       <div class="w3-light-grey">
-                        <div class="w3-container w3-green w3-center text-xs" style="height:14px; width:100%">100%</div>
+                        <div class="w3-container w3-green w3-center text-xs" style="height:2px; width:100%">100%</div>
                       </div>
                     </li>
                   </ul>
                 </li>
-                <li>&#9867;</li>
                 <li>
                   Dr. Nose & his Demons
                   <ul role="list" class="flex justify-center flex-col">
                     <li class="text-xs">
                       writing
                       <div class="w3-light-grey">
-                        <div class="w3-container w3-orange w3-center text-xs" style="height:14px; width:10%">10%</div>
+                        <div class="w3-container w3-orange w3-center text-xs" style="height:2px; width:10%">10%</div>
                       </div>
                     </li>
                   </ul>
                 </li>
-                <li>&#9867;</li>
                 <li>
                   <a href="starlive-book-one.pdf">
-                    Starlive: Two Idiots Against Entropy
+                    Starlive | <em>Two Idiots Against Entropy</em>
                     <svg class="inline h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
                     </svg>
@@ -204,14 +208,12 @@
                     <li class="text-xs">
                       writing
                       <div class="w3-light-grey">
-                        <div class="w3-container w3-green w3-center text-xs" style="height:14px; width:100%">100%</div>
+                        <div class="w3-container w3-green w3-center text-xs" style="height:2px; width:100%">100%</div>
                       </div>
                     </li>
                   </ul>
                 </li>
               </ul>
-            </li>
-          </ul>
           <br/><br/>
           <div class="text-xs items-center flex flex-col">
             <a class="display-inline text-xs" href="https://salta.studio">awful storytelling</a> by <a class="text-xs" href="https://salta.studio/about.html">olive feinberg</a><a class="text-xs" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a><div><img class="inline" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img class="inline" src="https://mirrors.creativecommons.org/presskit/icons/zero.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"></div>
