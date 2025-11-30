@@ -1,364 +1,459 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SALTA Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+      .hr {
+        width: 100%;
+        height: 1px;
+        display: block;
+        position: relative;
+        margin-bottom: 0em;
+        padding: 2em 0;
+      }
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SALTA Studio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <style>
-    .hr {
-      width: 100%;
-      height: 1px;
-      display: block;
-      position: relative;
-      margin-bottom: 0em;
-      padding: 2em 0;
-    }
+      .hr:after,
+      .hr:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 50%;
+        left: 0;
+      }
 
-    .hr:after,
-    .hr:before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      bottom: 50%;
-      left: 0;
-    }
+      .hr:before {
+        background: linear-gradient(
+          90deg,
+          #10111f 0%,
+          #10111f 50%,
+          transparent 50%,
+          transparent 100%
+        );
+        background-size: 15px;
+        background-position: center;
+        z-index: 1;
+      }
 
-    .hr:before {
-      background: linear-gradient(90deg, #10111F 0%, #10111F 50%, transparent 50%, transparent 100%);
-      background-size: 15px;
-      background-position: center;
-      z-index: 1;
-    }
-
-    .hr:after {
-      transition: opacity 0.3s ease, -webkit-animation 0.3s ease;
-      transition: opacity 0.3s ease, animation 0.3s ease;
-      transition: opacity 0.3s ease, animation 0.3s ease, -webkit-animation 0.3s ease;
-      background: linear-gradient(to right, #62efab 5%, #F2EA7D 15%, #F2EA7D 25%, #FF8797 35%, #FF8797 45%, #e1a4f4 55%, #e1a4f4 65%, #82fff4 75%, #82fff4 85%, #62efab 95%);
-      background-size: 200%;
-      background-position: 0%;
-      -webkit-animation: bar 15s linear infinite;
-      animation: bar 15s linear infinite;
-    }
-
-    @-webkit-keyframes bar {
-      0% {
+      .hr:after {
+        transition:
+          opacity 0.3s ease,
+          -webkit-animation 0.3s ease;
+        transition:
+          opacity 0.3s ease,
+          animation 0.3s ease;
+        transition:
+          opacity 0.3s ease,
+          animation 0.3s ease,
+          -webkit-animation 0.3s ease;
+        background: linear-gradient(
+          to right,
+          #62efab 5%,
+          #f2ea7d 15%,
+          #f2ea7d 25%,
+          #ff8797 35%,
+          #ff8797 45%,
+          #e1a4f4 55%,
+          #e1a4f4 65%,
+          #82fff4 75%,
+          #82fff4 85%,
+          #62efab 95%
+        );
+        background-size: 200%;
         background-position: 0%;
+        -webkit-animation: bar 15s linear infinite;
+        animation: bar 15s linear infinite;
       }
 
-      100% {
-        background-position: 200%;
+      @-webkit-keyframes bar {
+        0% {
+          background-position: 0%;
+        }
+
+        100% {
+          background-position: 200%;
+        }
       }
-    }
 
-    @keyframes bar {
-      0% {
-        background-position: 0%;
+      @keyframes bar {
+        0% {
+          background-position: 0%;
+        }
+
+        100% {
+          background-position: 200%;
+        }
       }
 
-      100% {
-        background-position: 200%;
+      .hr.anim:before {
+        background: linear-gradient(
+          90deg,
+          #10111f 0%,
+          #10111f 5%,
+          transparent 5%,
+          transparent 10%,
+          #10111f 10%,
+          #10111f 15%,
+          transparent 15%,
+          transparent 20%,
+          #10111f 20%,
+          #10111f 25%,
+          transparent 25%,
+          transparent 30%,
+          #10111f 30%,
+          #10111f 35%,
+          transparent 35%,
+          transparent 40%,
+          #10111f 40%,
+          #10111f 45%,
+          transparent 45%,
+          transparent 50%,
+          #10111f 50%,
+          #10111f 55%,
+          transparent 55%,
+          transparent 60%,
+          #10111f 60%,
+          #10111f 65%,
+          transparent 65%,
+          transparent 70%,
+          #10111f 70%,
+          #10111f 75%,
+          transparent 75%,
+          transparent 80%,
+          #10111f 80%,
+          #10111f 85%,
+          transparent 85%,
+          transparent 90%,
+          #10111f 90%,
+          #10111f 95%,
+          transparent 95%,
+          transparent 100%
+        );
+        background-size: 150px;
+        background-position: center;
+        z-index: 1;
+        -webkit-animation: bar 120s linear infinite;
+        animation: bar 120s linear infinite;
       }
-    }
 
-    .hr.anim:before {
-      background: linear-gradient(90deg, #10111F 0%, #10111F 5%, transparent 5%, transparent 10%, #10111F 10%, #10111F 15%, transparent 15%, transparent 20%, #10111F 20%, #10111F 25%, transparent 25%, transparent 30%, #10111F 30%, #10111F 35%, transparent 35%, transparent 40%, #10111F 40%, #10111F 45%, transparent 45%, transparent 50%, #10111F 50%, #10111F 55%, transparent 55%, transparent 60%, #10111F 60%, #10111F 65%, transparent 65%, transparent 70%, #10111F 70%, #10111F 75%, transparent 75%, transparent 80%, #10111F 80%, #10111F 85%, transparent 85%, transparent 90%, #10111F 90%, #10111F 95%, transparent 95%, transparent 100%);
-      background-size: 150px;
-      background-position: center;
-      z-index: 1;
-      -webkit-animation: bar 120s linear infinite;
-      animation: bar 120s linear infinite;
-    }
+      .hr.anim:hover:before {
+        -webkit-animation-duration: 20s;
+        animation-duration: 20s;
+      }
 
-    .hr.anim:hover:before {
-      -webkit-animation-duration: 20s;
-      animation-duration: 20s;
-    }
+      .hr.anim:hover:after {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+      }
 
-    .hr.anim:hover:after {
-      -webkit-animation-duration: 2s;
-      animation-duration: 2s;
-    }
+      .flex-list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 20px;
+        /* optional */
+      }
 
-    .flex-list {
-      display: flex;
-      flex-wrap: wrap;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      gap: 20px;
-      /* optional */
-    }
+      .flex-list li {
+        flex: 0 0 calc(100% / 3 - 10px);
+        /* For 3 columns, adjust as needed */
+        box-sizing: border-box;
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7V30JD7GE9"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    .flex-list li {
-      flex: 0 0 calc(100% / 3 - 10px);
-      /* For 3 columns, adjust as needed */
-      box-sizing: border-box;
-    }
-  </style>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7V30JD7GE9"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {dataLayer.push(arguments);}
-    gtag('js', new Date());
+      gtag("config", "G-7V30JD7GE9");
+    </script>
+  </head>
 
-    gtag('config', 'G-7V30JD7GE9');
-  </script>
-</head>
-
-<body class="bg-black text-white font-sans">
-  <div class="min-h-screen flex flex-col items-center justify-center text-center p-6">
-    <div class="mt-6 flex">
-      <img src="salta_studio.png" alt="SALTA Studio" width="640px" />
-    </div>
-    <div class="pt-12 xl:w-4/12 w-10/12">
-      <div class="mx-auto">
-        <ul role="list" class="flex-col mt-6 flex justify-center">
-          <li class="border-b border-gray-900 pb-5 mb-5">
-            Asgan
-            <table class="min-w-full text-left text-sm">
-              <thead>
-                <tr>
-                  <th class="w-2/6"></th>
-                  <th class="w-3/6"></th>
-                  <th class="w-1/6"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Book One</td>
-                  <td><em>Rises</em></td>
-                  <td>
-                    <ul role="list" class="flex justify-center flex-col">
-                      <li class="text-xs">
-                        <div class="w3-light-grey">
-                          <div class="w3-container w3-orange w3-center text-xs" style="height:2px; width:30%; color: white !important; font-size: smaller;">30%</div>
-                        </div>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li class="border-b border-gray-900 pb-5 mb-5">
-            The Shaman
-            <table class="min-w-full text-left text-sm">
-              <thead>
-                <tr>
-                  <th class="w-2/6"></th>
-                  <th class="w-3/6"></th>
-                  <th class="w-1/6"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>---</td>
-                  <td>---</td>
-                  <td align="center">
-                    <a href="the-shaman.pdf">
-                      <svg class="inline h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
-                      </svg>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li class="border-b border-gray-900 pb-5 mb-5">
-            One
-            <table class="min-w-full text-left text-sm">
-              <thead>
-                <tr>
-                  <th class="w-2/6"></th>
-                  <th class="w-3/6"></th>
-                  <th class="w-1/6"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>---</td>
-                  <td>---</td>
-                  <td align="center">
-                    <a href="3-2-1.pdf">
-                      <svg class="inline h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
-                      </svg>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li class="border-b border-gray-900 pb-5 mb-5">
-            Teteo
-            <table class="min-w-full text-left text-sm">
-              <thead>
-                <tr>
-                  <th class="w-2/6"></th>
-                  <th class="w-3/6"></th>
-                  <th class="w-1/6"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>---</td>
-                  <td>---</td>
-                  <td align="center">
-                    <a href="teteo.pdf">
-                      <svg class="inline h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
-                      </svg>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li class="border-b border-gray-900 pb-5 mb-5">
-            Medea
-            <table class="min-w-full text-left text-sm">
-              <thead>
-                <tr>
-                  <th class="w-2/6"></th>
-                  <th class="w-3/6"></th>
-                  <th class="w-1/6"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td><em>As Above So Below</em></td>
-                  <td align="center">
-                    <a href="medea.pdf">
-                      <svg class="inline h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
-                      </svg>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li class="border-b border-gray-900 pb-5 mb-5">
-            Knose, M.D.
-            <table class="min-w-full text-left text-sm">
-              <thead>
-                <tr>
-                  <th class="w-2/6"></th>
-                  <th class="w-3/6"></th>
-                  <th class="w-1/6"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Episode</td>
-                  <td><em>#001</em></td>
-                  <td >
-                    <ul role="list" class="flex justify-center flex-col">
-                      <li class="text-xs">
-                        <div class="w3-light-grey">
-                          <div class="w3-container w3-red w3-center text-xs" style="height:2px; width: 5%; font-size: smaller;">5%</div>
-                        </div>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-          <li class="border-b border-gray-900 pb-5 mb-5">
-            Waves
-            <table class="min-w-full text-left text-sm">
-              <thead>
-                <tr>
-                  <th class="w-2/6"></th>
-                  <th class="w-3/6"></th>
-                  <th class="w-1/6"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Book One</td>
-                  <td><em>Echoes in The Sea</em></td>
-                  <td align="center">
-                    <a href="waves.pdf">
-                      <svg class="inline h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                          d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
-                      </svg>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Book Two</td>
-                  <td><em>Elba</em></td>
-                  <td>
-                    <ul role="list" class="flex justify-center flex-col">
-                      <li class="text-xs">
-                        <div class="w3-light-grey">
-                          <div class="w3-container w3-orange w3-center text-xs" style="height:2px; width:10%; color: white !important; font-size: smaller;">10%</div>
-                        </div>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </li>
-        </ul>
+  <body class="bg-black text-white font-sans">
+    <div
+      class="min-h-screen flex flex-col items-center justify-center text-center p-6"
+    >
+      <div class="mt-6 flex">
+        <img src="salta_studio.png" alt="SALTA Studio" width="640px" />
+      </div>
+      <div class="pt-12 xl:w-4/12 w-10/12">
+        <div class="mx-auto">
+          <ul role="list" class="flex-col mt-6 flex justify-center">
+            <li class="border-b border-gray-900 pb-5 mb-5">
+              Asgan
+              <table class="min-w-full text-left text-sm">
+                <thead>
+                  <tr>
+                    <th class="w-2/6"></th>
+                    <th class="w-3/6"></th>
+                    <th class="w-1/6"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Book One</td>
+                    <td><em>Rises</em></td>
+                    <td>
+                      <ul role="list" class="flex justify-center flex-col">
+                        <li class="text-xs">
+                          <div class="w3-light-grey">
+                            <div
+                              class="w3-container w3-orange w3-center text-xs"
+                              style="
+                                height: 2px;
+                                width: 30%;
+                                color: white !important;
+                                font-size: smaller;
+                              "
+                            >
+                              30%
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="border-b border-gray-900 pb-5 mb-5">
+              The Shaman
+              <table class="min-w-full text-left text-sm">
+                <thead>
+                  <tr>
+                    <th class="w-2/6"></th>
+                    <th class="w-3/6"></th>
+                    <th class="w-1/6"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>---</td>
+                    <td>---</td>
+                    <td align="center">
+                      <a href="the-shaman.pdf">
+                        <svg
+                          class="inline h-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="border-b border-gray-900 pb-5 mb-5">
+              One
+              <table class="min-w-full text-left text-sm">
+                <thead>
+                  <tr>
+                    <th class="w-2/6"></th>
+                    <th class="w-3/6"></th>
+                    <th class="w-1/6"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>---</td>
+                    <td>---</td>
+                    <td align="center">
+                      <a href="3-2-1.pdf">
+                        <svg
+                          class="inline h-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="border-b border-gray-900 pb-5 mb-5">
+              Teteo
+              <table class="min-w-full text-left text-sm">
+                <thead>
+                  <tr>
+                    <th class="w-2/6"></th>
+                    <th class="w-3/6"></th>
+                    <th class="w-1/6"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>---</td>
+                    <td>---</td>
+                    <td align="center">
+                      <a href="teteo.pdf">
+                        <svg
+                          class="inline h-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+            <li class="border-b border-gray-900 pb-5 mb-5">
+              Medea
+              <table class="min-w-full text-left text-sm">
+                <thead>
+                  <tr>
+                    <th class="w-2/6"></th>
+                    <th class="w-3/6"></th>
+                    <th class="w-1/6"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td></td>
+                    <td><em>As Above So Below</em></td>
+                    <td align="center">
+                      <a href="medea.pdf">
+                        <svg
+                          class="inline h-4"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="size-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m9 13.5 3 3m0 0 3-3m-3 3v-6m1.06-4.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"
+                          />
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</body>
-<footer>
-  <div class="text-base-content flex flex-col items-center">
-    <div class="flex">
-      <a class="mr-2" href="/about.html">
-        about
-      </a>
+  </body>
+  <footer>
+    <div class="text-base-content flex flex-col items-center">
+      <div class="flex">
+        <a class="mr-2" href="/about.html"> about </a>
+      </div>
+      <b class="hr anim w-1/2"></b>
+      <p style="text-align: center; pointer-events: auto">
+        <a href="https://salta.studio"><b>SALTA Studio</b></a> by<a
+          href="https://github.com/n0um3n4"
+          ><b> noumena</b></a
+        >
+        is marked<a href="https://creativecommons.org/publicdomain/zero/1.0/"
+          ><b> CC0 1.0 Universal</b
+          ><img
+            src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
+            style="
+              display: inline;
+              max-width: 1em;
+              max-height: 1em;
+              margin-left: 0.2em;
+            " /><img
+            src="https://mirrors.creativecommons.org/presskit/icons/zero.svg"
+            style="
+              display: inline;
+              max-width: 1em;
+              max-height: 1em;
+              margin-left: 0.2em;
+            "
+        /></a>
+      </p>
     </div>
-    <b class="hr anim w-1/2"></b>
-    <p style="text-align: center; pointer-events: auto;"><a href="https://salta.studio"><b>SALTA Studio</b></a> by<a
-        href="https://github.com/n0um3n4"><b> noumena</b></a> is marked<a
-        href="https://creativecommons.org/publicdomain/zero/1.0/"><b> CC0 1.0 Universal</b><img
-          src="https://mirrors.creativecommons.org/presskit/icons/cc.svg"
-          style="display: inline; max-width: 1em;max-height:1em;margin-left: .2em;"><img
-          src="https://mirrors.creativecommons.org/presskit/icons/zero.svg"
-          style="display: inline; max-width: 1em;max-height:1em;margin-left: .2em;"></a></p>
-  </div>
-</footer>
-
+  </footer>
 </html>
