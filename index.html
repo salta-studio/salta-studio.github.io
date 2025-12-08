@@ -48,6 +48,12 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       .hr {
         width: 100%;
@@ -207,6 +213,42 @@
         /* For 3 columns, adjust as needed */
         box-sizing: border-box;
       }
+
+      .radial-fade img {
+        display: block;
+        height: auto;
+
+        /* The magic: use a radial gradient as a mask */
+        -webkit-mask-image: radial-gradient(
+          circle at center,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 1) 40%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        mask-image: radial-gradient(
+          circle at center,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 1) 40%,
+          rgba(0, 0, 0, 0) 100%
+        );
+
+        -webkit-mask-size: cover;
+        mask-size: cover;
+
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+      }
+
+      body {
+        font-family:
+          "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+          Consolas, "Liberation Mono", "Courier New", monospace !important;
+        background-image: url("title.png"); /* your image */
+        background-repeat: repeat; /* repeat both x and y */
+        background-position: 0 0; /* start at top-left */
+        background-attachment: fixed; /* optional: stays in place on scroll */
+        background-color: #000; /* fallback color if image fails */
+      }
     </style>
     <!-- Google tag (gtag.js) -->
     <script
@@ -224,11 +266,11 @@
     </script>
   </head>
 
-  <body class="bg-black text-white font-sans">
+  <body class="bg-black text-white">
     <div
       class="min-h-screen flex flex-col items-center justify-center text-center p-6"
     >
-      <div class="mt-6 flex">
+      <div class="mt-6 flex radial-fade">
         <img src="salta_studio.png" alt="SALTA Studio" width="640px" />
       </div>
       <div class="pt-12 xl:w-4/12 w-10/12">
