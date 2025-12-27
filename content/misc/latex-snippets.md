@@ -125,3 +125,26 @@ Here are the snippets of things I add to my latex files to DRY my content struct
 
 \end{GNPage}
 ```
+
+#### Book Template
+
+<a href="/book-template.tex" alt="Book Template Latex" />
+
+<object class="pdf-container" data="/book-template.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/book-template.pdf">Open the PDF</a>
+  </p>
+</object>
+
+
+#### Character Development Sheet
+
+<a href="/character-development-sheet.tex" alt="Character Development Sheet Latex" />
+
+<object class="pdf-container" data="/character-development-sheet.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/character-development-sheet.pdf">Open the PDF</a>
+  </p>
+</object>

@@ -1,26 +1,11 @@
 @import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @font-face {
   font-display: swap;
-  font-family: "Space Grotesk";
-  font-style: normal;
-  font-weight: 300;
-  src: url("/fonts/space-grotesk-v22-latin-300.woff2") format("woff2");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Space Grotesk";
-  font-style: normal;
+  font-family: "Space Mono", monospace;
   font-weight: 400;
-  src: url("/fonts/space-grotesk-v22-latin-regular.woff2") format("woff2");
-}
-@font-face {
-  font-display: swap;
-  font-family: "Space Grotesk";
   font-style: normal;
-  font-weight: 600;
-  src: url("/fonts/space-grotesk-v22-latin-600.woff2") format("woff2");
 }
 
 @font-face {
@@ -46,18 +31,7 @@ body {
   color: $color;
   margin: 0;
   min-height: 100vh;
-  background:
-    radial-gradient(
-      618px circle at 12% 18%,
-      rgb(81, 58, 178, 0.15) 0%,
-      rgb(46, 26, 71, 0.15) 60%
-    ),
-    radial-gradient(
-      281px circle at 85% 72%,
-      rgb(81, 58, 178, 0.15) 0%,
-      rgb(46, 26, 71, 0.15) 55%
-    ),
-    linear-gradient(160deg, #0c0b12 0%, #0c0b12 100%);
+  background: white;
 }
 
 @keyframes fade-in {
