@@ -1,0 +1,143 @@
+% Character Development Template (Two Column)
+% Compile with: pdflatex character_sheets.tex
+
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+
+\pagestyle{empty}
+\setlength{\columnsep}{16pt}
+\setlength{\fboxsep}{8pt}
+\definecolor{BoxGray}{gray}{0.94}
+\definecolor{LineGray}{gray}{0.65}
+
+\newcommand{\HRule}{\color{LineGray}\hrule\color{black}}
+\newcommand{\spc}{\vspace{6pt}}
+
+\newcommand{\Lines}[1]{%
+  \begingroup
+  \setlength{\parskip}{7pt}%
+  \color{LineGray}%
+  \foreach \i in {1,...,#1}{\noindent\rule{\linewidth}{0.4pt}\par}%
+  \color{black}%
+  \endgroup
+}
+
+\newcommand{\PromptBox}[3]{%
+  \noindent\fcolorbox{black}{BoxGray}{%
+    \parbox{\linewidth}{%
+      \textbf{#1}\hfill{\small\textit{#2}}\par\spc
+      #3
+    }%
+  }\par\spc
+}
+
+\newcommand{\Field}[1]{\textbf{#1}\hfill \rule{0.62\linewidth}{0.5pt}\par\spc}
+
+\newlist{tightitem}{itemize}{1}
+\setlist[tightitem]{label=--, leftmargin=*, itemsep=2pt, topsep=2pt}
+
+\newcommand{\CharacterSheet}[2]{%
+  \clearpage
+  {\Large \textbf{#1}} \hfill {\large \textit{#2}}\par
+  \HRule
+  \spc
+
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X X X@{}}
+    \Field{Name} & \Field{Age}\\
+    \Field{Role} & \Field{Occupation} & \Field{Home}
+  \end{tabularx}
+
+  \PromptBox{Core Concept}{1-2 sentences}{\Lines{3}}
+  \PromptBox{Logline}{What do they want + what stands in the way?}{\Lines{3}}
+
+  \PromptBox{Wants vs Needs}{Desire (surface) vs Need (deep)}{%
+    \textbf{Want:}\par\Lines{2}\spc
+    \textbf{Need:}\par\Lines{2}
+  }
+
+  \PromptBox{Primary Fear}{What do they avoid at all costs?}{\Lines{3}}
+  \PromptBox{Secret}{What would change how others see them?}{\Lines{3}}
+
+  \PromptBox{Personality}{3 traits, 2 flaws, 1 contradiction}{%
+    \textbf{Traits}\par\Lines{2}\spc
+    \textbf{Flaws}\par\Lines{2}\spc
+    \textbf{Contradiction}\par\Lines{2}
+  }
+
+  \PromptBox{Values \& Moral Lines}{What they will / won’t do}{\Lines{4}}
+
+  \PromptBox{Backstory}{3 key events that shaped them}{%
+    \begin{tightitem}
+      \item \rule{0.92\linewidth}{0.4pt}
+      \item \rule{0.92\linewidth}{0.4pt}
+      \item \rule{0.92\linewidth}{0.4pt}
+    \end{tightitem}
+    \spc
+    \textbf{Old wound:}\par\Lines{2}
+  }
+
+  \PromptBox{Body \& Style}{Silhouette, posture, wardrobe, “tells”}{\Lines{5}}
+
+  \PromptBox{Voice}{Cadence, vocabulary, favorite lies, catchphrases}{%
+    \textbf{Cadence:}\par\Lines{2}\spc
+    \textbf{Go-to phrases:}\par\Lines{2}\spc
+    \textbf{When stressed, they…}\par\Lines{2}
+  }
+
+  \PromptBox{Skills \& Gaps}{Competence, blind spots, “cheats”}{%
+    \textbf{Skills}\par\Lines{2}\spc
+    \textbf{Gaps}\par\Lines{2}\spc
+    \textbf{Superpower (literal or social):}\par\Lines{2}
+  }
+
+  \PromptBox{Relationships}{3 anchors + friction}{%
+    \begin{tabularx}{\linewidth}{@{}X X@{}}
+      \textbf{Person} & \textbf{Tension / Need} \\
+      \rule{\linewidth}{0.4pt} & \rule{\linewidth}{0.4pt} \\
+      \Lines{1} & \Lines{1} \\
+      \Lines{1} & \Lines{1} \\
+      \Lines{1} & \Lines{1} \\
+    \end{tabularx}
+  }
+
+  \PromptBox{Character Arc Beats}{Before $\rightarrow$ After}{%
+    \textbf{Start state (belief):}\par\Lines{2}\spc
+    \textbf{Inciting pressure:}\par\Lines{2}\spc
+    \textbf{Midpoint shift:}\par\Lines{2}\spc
+    \textbf{Lowest point:}\par\Lines{2}\spc
+    \textbf{Climax choice:}\par\Lines{2}\spc
+    \textbf{End state (new belief):}\par\Lines{2}
+  }
+
+  \PromptBox{Scene Engine}{How they behave on the page}{%
+    \textbf{Goal (in most scenes):}\par\Lines{2}\spc
+    \textbf{Default tactic:}\par\Lines{2}\spc
+    \textbf{When blocked, they escalate by…}\par\Lines{2}\spc
+    \textbf{What changes them (triggers):}\par\Lines{2}
+  }
+
+  \PromptBox{Symbols \& Motifs}{Objects, colors, animals, weather, music}{\Lines{4}}
+
+  \PromptBox{Notes}{Loose threads, future reveals, fun details}{\Lines{8}}
+}
+
+\usepackage{pgffor}
+
+\begin{document}
+
+\CharacterSheet{(Character Name)}{(Book / Project / Role tag)}
+
+% Duplicate as many times as needed:
+% \CharacterSheet{Olive}{Protagonist}
+% \CharacterSheet{Star}{Protagonist}
+% \CharacterSheet{Karl}{Catalyst}
+
+\end{document}

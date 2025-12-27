@@ -1,0 +1,247 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{pgffor}
+
+\pagestyle{empty}
+\setlength{\columnsep}{16pt}
+\setlength{\fboxsep}{8pt}
+\definecolor{BoxGray}{gray}{0.94}
+\definecolor{LineGray}{gray}{0.65}
+
+\newcommand{\HRule}{\color{LineGray}\hrule\color{black}}
+\newcommand{\spc}{\vspace{6pt}}
+
+\newcommand{\Lines}[1]{%
+  \begingroup
+  \setlength{\parskip}{7pt}%
+  \color{LineGray}%
+  \foreach \i in {1,...,#1}{\noindent\rule{\linewidth}{0.4pt}\par}%
+  \color{black}%
+  \endgroup
+}
+
+\newcommand{\PromptBox}[3]{%
+  \noindent\fcolorbox{black}{BoxGray}{%
+    \parbox{\linewidth}{%
+      \textbf{#1}\hfill{\small\textit{#2}}\par\spc
+      #3
+    }%
+  }\par\spc
+}
+
+\newcommand{\Field}[1]{\textbf{#1}\hfill \rule{0.62\linewidth}{0.5pt}\par\spc}
+
+\newlist{tightitem}{itemize}{1}
+\setlist[tightitem]{label=--, leftmargin=*, itemsep=2pt, topsep=2pt}
+
+\newcommand{\BookPlan}[2]{%
+  {\Large \textbf{#1}} \hfill {\large \textit{#2}}\par
+  \HRule
+  \spc
+
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X X X@{}}
+    \Field{Genre} & \Field{Target Len} & \Field{Keywords} \\
+    \Field{POV} & \Field{Time/place} & \Field{Audience}
+  \end{tabularx}
+
+    \PromptBox{One-Sentence Premise}{core engine}{\Lines{3}}
+    \PromptBox{Elevator Pitch}{5–7 sentences}{\Lines{6}}
+
+    \PromptBox{The Book Promise}{what readers came for}{%
+      \textbf{Core fantasy / appeal:}\par\Lines{2}\spc
+      \textbf{What must happen on-page (non-negotiables):}\par\Lines{3}\spc
+      \textbf{What to avoid (promise-breakers):}\par\Lines{3}
+    }
+
+    \PromptBox{Theme / Question}{what is being tested?}{%
+      \textbf{Theme statement:}\par\Lines{2}\spc
+      \textbf{Question the story answers:}\par\Lines{2}\spc
+      \textbf{Answer (earned, not preached):}\par\Lines{2}
+    }
+
+    \PromptBox{Main Throughlines}{the 3 braided ropes}{%
+      \textbf{Plot (external problem):}\par\Lines{3}\spc
+      \textbf{Character (internal change):}\par\Lines{3}\spc
+      \textbf{World / Idea (lens):}\par\Lines{3}
+    }
+
+    \PromptBox{Key Characters}{roles + functions}{%
+      \textbf{Protagonist:}\par\Lines{2}\spc
+      \textbf{Antagonist / Force:}\par\Lines{2}\spc
+      \textbf{Ally / Love / Rival / Mentor:}\par\Lines{3}
+    }
+
+    \PromptBox{Stakes \& Clock}{why now?}{%
+      \textbf{Personal stakes:}\par\Lines{2}\spc
+      \textbf{Public stakes:}\par\Lines{2}\spc
+      \textbf{Ticking clock / deadlines:}\par\Lines{2}
+    }
+
+    \PromptBox{Rules \& Constraints}{magic/scifi/social rules}{%
+      \textbf{Rule 1:}\par\Lines{1}\spc
+      \textbf{Rule 2:}\par\Lines{1}\spc
+      \textbf{Rule 3:}\par\Lines{1}\spc
+      \textbf{How rules create problems:}\par\Lines{2}
+    }
+
+    \PromptBox{Set Pieces / Tentpoles}{scenes you refuse to cut}{%
+      \begin{tightitem}
+        \item \rule{0.92\linewidth}{0.4pt}
+        \item \rule{0.92\linewidth}{0.4pt}
+        \item \rule{0.92\linewidth}{0.4pt}
+        \item \rule{0.92\linewidth}{0.4pt}
+      \end{tightitem}
+      \spc
+      \textbf{Why each matters:}\par\Lines{2}
+    }
+}
+
+\newcommand{\ActMap}{%
+  \clearpage
+  {\LARGE \textbf{Act / Arc Map}}\par
+  \HRule
+  \spc
+
+  \PromptBox{Act I}{setup + hook + first turn}{%
+    \textbf{Status quo + wound:}\par\Lines{2}\spc
+    \textbf{Inciting incident:}\par\Lines{2}\spc
+    \textbf{First plot point (door closes):}\par\Lines{2}
+  }
+
+  \PromptBox{Act II}{pressure cooker}{%
+    \textbf{Progress + complications:}\par\Lines{3}\spc
+    \textbf{Midpoint (new information / reversal):}\par\Lines{2}\spc
+    \textbf{Spiral / costs increase:}\par\Lines{3}\spc
+    \textbf{Second plot point (last chance):}\par\Lines{2}
+  }
+
+  \PromptBox{Act III}{payoff}{%
+    \textbf{Final plan:}\par\Lines{2}\spc
+    \textbf{Climax choice:}\par\Lines{2}\spc
+    \textbf{Resolution + new normal:}\par\Lines{2}
+  }
+
+  \PromptBox{Character Arc}{belief shift}{%
+    \textbf{Lie / misbelief:}\par\Lines{2}\spc
+    \textbf{Truth learned:}\par\Lines{2}\spc
+    \textbf{Proof scene (they act differently):}\par\Lines{2}
+  }
+}
+
+\newcommand{\ChapterCard}[2]{%
+  \clearpage
+  {\LARGE \textbf{Chapter #1}} \hfill {\Large \textit{#2}}\par
+  \HRule
+  \spc
+
+  \PromptBox{Purpose}{why this chapter exists}{%
+    \textbf{Plot job:}\par\Lines{2}\spc
+    \textbf{Character job:}\par\Lines{2}\spc
+    \textbf{Theme job:}\par\Lines{2}
+  }
+
+  \PromptBox{POV / Setting / Time}{camera + stage}{%
+    \textbf{POV:}\par\Lines{1}\spc
+    \textbf{Location:}\par\Lines{1}\spc
+    \textbf{Time / timeline marker:}\par\Lines{1}
+  }
+
+  \PromptBox{Starting State}{what is true at the start}{%
+    \textbf{Goal:}\par\Lines{2}\spc
+    \textbf{Mood / energy:}\par\Lines{2}\spc
+    \textbf{What they think they want:}\par\Lines{2}
+  }
+
+  \PromptBox{Conflict}{the engine}{%
+    \textbf{Obstacle / opposition:}\par\Lines{2}\spc
+    \textbf{Tactic used:}\par\Lines{2}\spc
+    \textbf{Cost / consequence:}\par\Lines{2}
+  }
+
+  \PromptBox{Key Beats}{mini-outline}{%
+    \begin{tightitem}
+      \item \rule{0.92\linewidth}{0.4pt}
+      \item \rule{0.92\linewidth}{0.4pt}
+      \item \rule{0.92\linewidth}{0.4pt}
+      \item \rule{0.92\linewidth}{0.4pt}
+      \item \rule{0.92\linewidth}{0.4pt}
+    \end{tightitem}
+  }
+
+  \PromptBox{Revelation / Turn}{what changes}{%
+    \textbf{New information:}\par\Lines{2}\spc
+    \textbf{Decision / reversal:}\par\Lines{2}
+  }
+
+  \PromptBox{Ending State}{why we must read next}{%
+    \textbf{New goal:}\par\Lines{2}\spc
+    \textbf{Hook / question:}\par\Lines{2}\spc
+    \textbf{Cliffhanger (if any):}\par\Lines{2}
+  }
+
+  \PromptBox{Continuity Checklist}{don’t break reality}{%
+    \begin{tightitem}
+      \item Location continuity: \rule{0.62\linewidth}{0.4pt}
+      \item Time continuity: \rule{0.66\linewidth}{0.4pt}
+      \item Character knowledge: \rule{0.58\linewidth}{0.4pt}
+      \item Injuries / inventory: \rule{0.62\linewidth}{0.4pt}
+      \item World rules obeyed: \rule{0.60\linewidth}{0.4pt}
+    \end{tightitem}
+  }
+
+  \PromptBox{Notes}{snippets, lines, images}{\Lines{10}}
+
+}
+
+\newcommand{\RevisionPlan}{%
+  \clearpage
+  {\LARGE \textbf{Draft \& Revision Plan}}\par
+  \HRule
+  \spc
+
+  \PromptBox{Draft Targets}{definition of “done enough”}{%
+    \textbf{Daily/weekly target:}\par\Lines{2}\spc
+    \textbf{Draft deadline(s):}\par\Lines{2}\spc
+    \textbf{Minimum viable draft rules (e.g., no line edits):}\par\Lines{3}
+  }
+
+  \PromptBox{Passes}{edit in layers}{%
+    \textbf{Pass 1 (structure):}\par\Lines{2}\spc
+    \textbf{Pass 2 (character):}\par\Lines{2}\spc
+    \textbf{Pass 3 (theme):}\par\Lines{2}\spc
+    \textbf{Pass 4 (language):}\par\Lines{2}
+  }
+
+  \PromptBox{Beta Questions}{what to ask readers}{%
+    \begin{tightitem}
+      \item Where did you get bored?
+      \item What confused you?
+      \item Which character felt most real / least real?
+      \item What did you think the theme was?
+      \item Which scene lingered after reading?
+    \end{tightitem}
+    \spc
+    \textbf{Custom questions:}\par\Lines{4}
+  }
+}
+
+\begin{document}
+
+\BookPlan{(Book Title)}{(Series / Book \# / Draft \#)}
+\ActMap
+
+\ChapterCard{1}{(Chapter Title)}
+% \ChapterCard{2}{(Chapter Title)}
+% \ChapterCard{3}{(Chapter Title)}
+
+\RevisionPlan
+
+\end{document}

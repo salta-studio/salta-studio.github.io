@@ -1,0 +1,298 @@
+\documentclass[10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=0.6in]{geometry}
+\usepackage{multicol}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlist[itemize]{leftmargin=*,nosep}
+\setlist[enumerate]{leftmargin=*,nosep}
+
+\newcommand{\V}[1]{\textbf{#1}} % Veyruun form
+\newcommand{\G}[1]{\textsc{#1}} % gloss label
+\newcommand{\ex}[2]{%
+\textbf{#1}\\
+\hspace*{0.8em}“#2”\\[2pt]
+}
+
+\begin{document}
+
+{\LARGE \textbf{Veyruun --- Cheat Sheet}}\\
+\textit{A traveler’s tongue for void-crossers.}\\
+\rule{\linewidth}{0.4pt}
+
+\begin{multicols}{2}
+
+\section*{1) Sound \& Pronunciation}
+\textbf{Vibe:} cold, clipped, corridor-friendly. Stress usually on the \textbf{2nd syllable}.\\
+\textbf{Common consonants:} v z k g r n l s sh t d m \\
+\textbf{Vowels:} a e i o u (long: aa ii uu).\\
+\textbf{Syllables:} (C)(C)V(C).\\
+\textbf{Example:} \V{zulkaíven} \textit{zul-kah-EE-ven}.
+
+\section*{2) Core Grammar}
+\textbf{Default word order:} \textbf{SOV} (Subject--Object--Verb).\\
+\textbf{Negation:} \V{nai} placed near the verb.
+
+\subsection*{Cases (suffixes)}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.22\linewidth}X@{}}
+\toprule
+\textbf{Suffix} & \textbf{Meaning / Use}\\
+\midrule
+\V{-Ø} & subject (no marking)\\
+\V{-un} & direct object\\
+\V{-ir} & from\\
+\V{-ar} & toward / to\\
+\V{-esh} & in / within\\
+\V{-ka} & with (neutral, incidental)\\
+\bottomrule
+\end{tabularx}
+
+\subsection*{Two kinds of "with"}
+\begin{itemize}
+  \item \V{-ka} = neutral "with" (incidental): \V{tika} with you
+  \item \V{'kai} = bonded "with" (my chosen): \V{ti'kai} with you (bonded)
+\end{itemize}
+
+\subsection*{Plural + Possessive}
+\textbf{Plural:} \V{-im} (countable): \V{kordim} tools.\\
+\textbf{Possessive clitics:} \V{-em} my, \V{-et} your, \V{-es} their.\\
+Examples: \V{vaskem} my ship, \V{kaívet} your chosen.
+
+\subsection*{Connectors}
+\V{kur} = because; \V{shaen} = but/however; \V{tovash} = enough/stop.
+
+\section*{3) Pronouns}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.28\linewidth}X@{}}
+\toprule
+\textbf{Form} & \textbf{Meaning}\\
+\midrule
+\V{za} & I / me\\
+\V{ti} & you (sing.)\\
+\V{se} & they (sing./unknown)\\
+\V{zan} & we (neutral)\\
+\V{zan'kai} & we (bonded, chosen company)\\
+\V{tir} & you (plural)\\
+\bottomrule
+\end{tabularx}
+
+\section*{4) Verbs (Tense, Mood, Aspect)}
+\textbf{Tense suffixes:} \V{-ta} past, \V{-sha} ongoing, \V{-ra} future.\\
+\textbf{Mood:} \V{-m} imperative, \V{-n} conditional (“would/if”).\\
+\textbf{Negation:} \V{nai} (particle) near the verb.
+
+\subsection*{Mini-conjugation (verb root \V{ven} “cross”)}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.38\linewidth}X@{}}
+\toprule
+\textbf{Form} & \textbf{Meaning}\\
+\midrule
+\V{venta} & crossed\\
+\V{vensha} & is crossing\\
+\V{venra} & will cross\\
+\V{venm} & Cross! / Jump!\\
+\V{venran} & would cross / if (we) cross\\
+\V{vensha nai} & is not crossing\\
+\bottomrule
+\end{tabularx}
+
+\section*{5) Particles}
+\begin{itemize}
+  \item \V{eh} = question marker (sentence-final)
+  \item \V{na} = softener (“easy / don’t panic”)
+  \item \V{sha} = emphasis (“this matters”)
+  \item \V{...zul.} = resignation tone-tag
+  \item \V{...sáli.} = defiant hope tone-tag
+\end{itemize}
+
+\section*{6) Evidentials}
+Sentence-final markers (especially in logs):
+\begin{itemize}
+  \item \V{-ser} = I saw / verified
+  \item \V{-vem} = I heard / reported
+  \item \V{-tov} = I infer / it follows
+  \item \V{-reln} = fold-dream / seam-knowledge (unreliable)
+\end{itemize}
+
+\section*{7) Word Formation}
+\textbf{Pattern:} root + root + suffix.\\
+\textbf{Suffixes:}
+\begin{itemize}
+  \item \V{-en} agent/person (\V{vasken} ship-keeper/pilot)
+  \item \V{-ar} place/thing (\V{relnar} fold-gate/place)
+  \item \V{-i} abstract state (\V{druni} dread-as-state)
+  \item \V{-um} collective (\V{kaium} “the chosen (group)”)
+  \item \V{-eth} knowledge/skill/role (\V{relneth} foldcraft/seam-sense)
+\end{itemize}
+\textbf{Cultural compounding rules (stylistic):}
+\begin{itemize}
+  \item Grim/void concepts often start with \V{zul-}.
+  \item \V{kai} sits “near the heart” (often middle) in relational compounds.
+  \item Place-things tend to end with \V{-ar}.
+\end{itemize}
+
+\section*{8) Core Roots}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.34\linewidth}X@{}}
+\toprule
+\textbf{Root} & \textbf{Meaning}\\
+\midrule
+\V{zul} & indifferent void / cosmic uncaring\\
+\V{reln} & fold seam (between dimensions)\\
+\V{ven} & cross a threshold (space/dimension/fate-line)\\
+\V{kai} & chosen companion (bonded)\\
+\V{sáli} & stubborn defiant hope-light\\
+\V{drun} & dread / weight of meaninglessness\\
+\V{nér} & star (as waypoint)\\
+\V{vask} & ship/vessel\\
+\V{kath} & oath that costs something\\
+\V{hílen} & homesick-memory\\
+\V{mór} & laughter in the dark\\
+\V{tovar} & story-thread / chosen route\\
+\bottomrule
+\end{tabularx}
+
+\section*{9) Keystone Words}
+\begin{itemize}
+  \item \V{zulkaíven} = crossing the void with the chosen)
+  \item \V{kérunkaí} = made-meaning through the chosen
+  \item \V{tovarshur} = endure by keeping the story-thread
+\end{itemize}
+
+\section*{10) Numbers}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.16\linewidth}X@{}}
+\toprule
+\textbf{\#} & \textbf{Spoken form}\\
+\midrule
+0 & \V{zul}\\
+1 & \V{na}\\
+2 & \V{du}\\
+3 & \V{re}\\
+4 & \V{ka}\\
+5 & \V{su}\\
+6 & \V{ve}\\
+7 & \V{drun}\\
+\bottomrule
+\end{tabularx}
+
+\section*{11) Everyday Lexicon}
+\textbf{Verbs:} \V{som} sleep; \V{vak} wake; \V{dun} eat; \V{shin} drink;
+\V{kor} fix/work; \V{tal} rest; \V{vul} speak; \V{hesh} listen;
+\V{dar} want; \V{keth} hold/keep; \V{lir} give; \V{sok} take;
+\V{vren} lie; \V{sair} tell truth/align speech.\\
+\textbf{Nouns:} \V{kord} tool; \V{kesh} wire/line; \V{bol} hatch/door; \V{siv} lock/seal;
+\V{rask} fuel; \V{zeth} air/oxygen; \V{mek} food; \V{shin} water/drink;
+\V{shav} med/patch; \V{tarn} credits/tokens; \V{prax} trade/deal;
+\V{tor} light; \V{vek} dark; \V{ash} heat; \V{vyr} cold.
+
+\section*{12) Phrasebook}
+\subsection*{Greetings}
+\ex{\V{Relneth eh?}}{You been through the folds?}
+\ex{\V{Relneth.}}{I have.}
+\ex{\V{Zan'kai eh?}}{Are we bonded?}
+
+\subsection*{Void + hope}
+\ex{\V{Zul ker nai. Kai ker ve.}}{The void has no meaning. The chosen do.}
+\ex{\V{Kérun ve.}}{Meaning is made.}
+\ex{\V{Zan=kai ven-ra, sáli.}}{We will cross together—defiance.}
+
+\subsection*{Ship ops / emergencies}
+\ex{\V{Bol sivm!}}{Seal the hatch!}
+\ex{\V{Zeth nai!}}{No air!}
+\ex{\V{Rask nai, kur kor-sha.}}{No fuel, because we’re fixing it.}
+\ex{\V{Tor lirm.}}{Give me the light.}
+\ex{\V{Ren na.}}{Breathe. Easy.}
+
+\subsection*{Bond / intimacy}
+\ex{\V{Ti hílen ve.}}{You are home.}
+\ex{\V{Ti'kai kethm.}}{Stay with me (bonded).}
+\ex{\V{Za ti'kai venra.}}{I'll cross with you.}
+
+\subsection*{Truth / lies}
+\ex{\V{Sair-ser.}}{Truth—I saw it.}
+\ex{\V{Sair-vem.}}{True (reported).}
+\ex{\V{Vren nai.}}{No lies.}
+
+\subsection*{Insults}
+\ex{\V{Zulkai.}}{Void-bond.}
+\ex{\V{Zulnér.}}{Directionless / faithless.}
+\ex{\V{Kai ker nai.}}{You have no chosen.}
+
+\subsection*{Jump Chant}
+\ex{\V{Zul nai. Reln ve. Zan'kai ven.}}{Not the void. The seam is. We cross together.}
+
+\section*{13) A tiny dialogue}
+\ex{\V{Ti relneth eh?}}{You been through?}
+\ex{\V{Relneth. Druni.}}{Yes. Dread remains.}
+\ex{\V{Zan'kai?}}{We bonded?}
+\ex{\V{Zan'kai. Zulkaíven sáli.}}{We are. Together hope.}
+\ex{\V{Venm.}}{Jump.}
+
+\section*{14) Useful Verbs}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.16\linewidth}X@{}}
+\toprule
+\textbf{Verb} & \textbf{Translation}\\
+\midrule
+ven & \V{cross}\\
+ser & \V{see/observe}\\
+keth & \V{hold/keep}\\
+drai & \V{drift/wander}\\
+shur & \V{survive/endure}\\
+lúm & \V{laugh}\\
+som & \V{to sleep}\\
+vak & \V{to wake}\\
+dun & \V{to eat}\\
+shin & \V{to drink}\\
+kor & \V{to work / fix}\\
+tal & \V{to rest / pause}\\
+vul & \V{to speak / say}\\
+hesh & \V{to listen}\\
+dar & \V{to want / desire}\\
+lir & \V{to give}\\
+sok & \V{to take}\\
+vren & \V{to lie (intentionally)}\\
+sair & \V{to tell truth / align words with reality}\\
+\bottomrule
+\end{tabularx}
+
+\section*{15) Useful Nouns}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{0.16\linewidth}X@{}}
+\toprule
+\textbf{Noun} & \textbf{Translation}\\
+\midrule
+nash & \V{hand / grip}\\
+sen & \V{skin / surface (also "hull")}\\
+mur & \V{mouth}\\
+ren & \V{breath}\\
+tor & \V{light (practical light, not "hope-light")}\\
+vek & \V{dark}\\
+ash & \V{heat}\\
+vyr & \V{cold}\\
+kord & \V{tool}\\
+kesh & \V{wire / line / cable}\\
+bol & \V{door / hatch}\\
+siv & \V{lock / seal}\\
+rask & \V{fuel / burn-stuff}\\
+zeth & \V{oxygen / air supply}\\
+mek & \V{food (generic)}\\
+shin & \V{water / drink (noun+verb)}\\
+shav & \V{med / patch / first aid}\\
+tarn & \V{money / credits (literally "tokens")}\\
+prax & \V{trade / deal}\\
+vekra & \V{night cycle / "ship-night"}\\
+\bottomrule
+\end{tabularx}
+
+\end{multicols}
+
+\vfill
+\rule{\linewidth}{0.4pt}\\
+\textit{Notes: This cheatsheet defines a compact, consistent “working Veyruun.” Expand by minting new roots via compounding + suffixes.}
+
+\end{document}

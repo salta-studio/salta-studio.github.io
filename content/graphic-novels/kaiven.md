@@ -409,3 +409,17 @@ You can combine them:
     <a href="/veyruun.pdf">Open the PDF</a>
   </p>
 </object>
+
+<object class="pdf-container" data="/veyruun_1000_words.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/veyruun_1000_words.pdf">Open the PDF</a>
+  </p>
+</object>
+
+<object class="pdf-container" data="/veyruun_1000_phrases.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/veyruun_1000_phrases.pdf">Open the PDF</a>
+  </p>
+</object>
