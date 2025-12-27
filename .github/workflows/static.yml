@@ -36,7 +36,7 @@ jobs:
           mkdir -p deploy/short-stories
           cp -r children-books/. deploy/children-books
           cp -r fonts/. deploy/fonts
-          cp -r graphc-novels/. deploy/graphic-novels
+          cp -r graphic-novels/. deploy/graphic-novels
           cp -r misc/. deploy/misc
           cp -r short-stories/. deploy/short-stories
           cp *.* deploy
