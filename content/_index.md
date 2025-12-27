@@ -3,7 +3,7 @@ title = "index"
 insert_anchor_links = "right"
 +++
 
-I created SALTA Studio out of an (**almost desperate**) need to tell stories. Once, I heard *Alan Moore* say that storytelling is almost shamanic. That it was the shamans of the Paleolithic era who started the tradition. I found that interesting, to say the least.
+I created SALTA Studio out of the (**almost desperate**) need to tell stories. Once, I heard *Alan Moore* say that storytelling is almost shamanic. That it was the shamans of the Paleolithic era who started the tradition. I found that interesting, to say the least.
 
 I have many unwritten stories. 
 
