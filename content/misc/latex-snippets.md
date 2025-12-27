@@ -124,5 +124,4 @@ Here are the snippets of things I add to my latex files to DRY my content struct
 \Transition{CUT TO:}
 
 \end{GNPage}
-
 ```

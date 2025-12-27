@@ -1,0 +1,49 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
+
+on:
+  push:
+    branches: ["main"]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Prepare deploy directory
+        run: |
+          mkdir -p deploy/children-books
+          mkdir -p deploy/fonts
+          mkdir -p deploy/graphic-novels
+          mkdir -p deploy/misc
+          mkdir -p deploy/short-stories
+          cp -r children-books/. deploy/children-books
+          cp -r fonts/. deploy/fonts
+          cp -r graphc-novels/. deploy/graphic-novels
+          cp -r misc/. deploy/misc
+          cp -r short-stories/. deploy/short-stories
+          cp *.* deploy
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: deploy
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
