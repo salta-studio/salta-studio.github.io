@@ -1,32 +1,42 @@
-+++
-title = "latex snippets"
-weight = 2
-+++
+\documentclass[12pt]{article}
 
-Here are the snippets of things I add to my latex files to DRY my content structures.
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xparse}
 
-#### Dialogue, Classic
+% ---------- Global script feel ----------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\raggedright
 
-<img src="/dialogue.png" class="radial-fade" alt="dialogue" style="margin: 0 auto;" />
+% ---------- Counters ----------
+\newcounter{gnpage}
+\newcounter{gnpanel}[gnpage]
+\renewcommand{\thegnpage}{\arabic{gnpage}}
+\renewcommand{\thegnpanel}{\arabic{gnpanel}}
 
-```latex
-\newcommand{\dialogue}[3]{
-	\begin{quote}
-		\centering
-		\vspace{0.25cm}
-		\textit{#2} \\ \textbf{\footnotesize{#1}} \\\textit{\footnotesize{#3}}
-		\vspace{0.25cm}		
-	\end{quote}
+% ---------- Tunable indents ----------
+\newlength{\GNDialogueLeft}
+\newlength{\GNDialogueRight}
+\setlength{\GNDialogueLeft}{0.22\textwidth}
+\setlength{\GNDialogueRight}{0.22\textwidth}
+
+% ---------- Title block ----------
+\NewDocumentCommand{\GNTitle}{ m m O{\today} }{%
+  \thispagestyle{empty}
+  \vspace*{0.18\textheight}
+  {\Large\bfseries #1\par}
+  \vspace{0.5em}
+  {\large #2\par}
+  \vspace{1em}
+  {\itshape #3\par}
+  \vfill
+  \newpage
 }
 
-\dialogue{Star}{I said I’ve got this}{muttered, tightening her jaw}
-```
-
-#### For Graphic Novels
-
-<img src="/graphic-novels.png" class="radial-fade" alt="dialogue" style="margin: 0 auto;" />
-
-```latex
+% ---------- Page ----------
+% Usage: \begin{GNPage}[optional page subtitle] ... \end{GNPage}
 \NewDocumentEnvironment{GNPage}{ O{} }{%
   \refstepcounter{gnpage}
   \setcounter{gnpanel}{0}
@@ -39,10 +49,14 @@ Here are the snippets of things I add to my latex files to DRY my content struct
   \vspace{1em}
 }
 
+% ---------- Scene / Environment ----------
 \NewDocumentCommand{\Env}{ +m }{%
   {\bfseries\MakeUppercase{#1}}\par
 }
 
+% ---------- Panel ----------
+% Starred version doesn't increment (useful for splash / non-numbered beats)
+% Usage: \Panel[optional label]{description}
 \NewDocumentCommand{\Panel}{ s O{} +m }{%
   \par\vspace{0.5em}
   \IfBooleanTF{#1}{%
@@ -58,10 +72,12 @@ Here are the snippets of things I add to my latex files to DRY my content struct
   #3\par
 }
 
+% ---------- Action ----------
 \NewDocumentCommand{\Action}{ +m }{%
   #1\par
 }
 
+% ---------- Caption / Narration ----------
 \NewDocumentCommand{\Caption}{ +m }{%
   {\itshape CAPTION: #1}\par
 }
@@ -69,18 +85,23 @@ Here are the snippets of things I add to my latex files to DRY my content struct
   {\itshape NARRATION: #1}\par
 }
 
+% ---------- SFX ----------
 \NewDocumentCommand{\SFX}{ +m }{%
   {\bfseries SFX: \MakeUppercase{#1}}\par
 }
 
+% ---------- Transition ----------
 \NewDocumentCommand{\Transition}{ +m }{%
   \hfill{\bfseries \MakeUppercase{#1}}\par
 }
 
+% ---------- Note to self (won't look like a panel element) ----------
 \NewDocumentCommand{\Note}{ +m }{%
   {\small\itshape [NOTE: #1]}\par
 }
 
+% ---------- Dialogue ----------
+% Usage: \Dialogue[optional parenthetical]{CHARACTER}{line(s)}
 \NewDocumentCommand{\Dialogue}{ O{} m +m }{%
   {\par\noindent\centering\textsc{#2}\par}
   \begin{list}{}{%
@@ -96,9 +117,12 @@ Here are the snippets of things I add to my latex files to DRY my content struct
   \end{list}%
 }
 
+% Optional quick beats
 \NewDocumentCommand{\Beat}{}{%
   {\itshape (beat)}\par
 }
+
+\begin{document}
 
 \GNTitle{Lembas}{noumena}[Draft — \today]
 
@@ -125,4 +149,4 @@ Here are the snippets of things I add to my latex files to DRY my content struct
 
 \end{GNPage}
 
-```
+\end{document}
