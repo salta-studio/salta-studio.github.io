@@ -1,0 +1,14 @@
+base_url = "https://salta.studio"
+title = "SALTA Studio"
+compile_sass = true
+build_search_index = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "base16-ocean-light"
+
+[extra]
+logo = "/salta-logo.png"
+easydocs_logo_always_clickable = false
+easydocs_uglyurls = false
+easydocs_heading_threshold = 5

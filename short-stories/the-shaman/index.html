@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://salta.studio/main.css?h=a6c9e15f9d63f5055847">
     <meta name="generator" content="Zola">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>SALTA Studio</title>
+    <title> SALTA Studio | the shaman </title>
 </head>
 <body>
 
@@ -13,11 +13,13 @@
     
     
         <nav>
-            <img src="https://salta.studio/salta-logo.png" alt="logo"/>
+            <a href="https:&#x2F;&#x2F;salta.studio">
+                        <img src="https://salta.studio/salta-logo.png" alt="logo"/>
+                    </a>
                 <button onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton" aria-label="Toggle navigation"></button>
             <div id="trees">
                 <input class="tree-toggle" type="checkbox" id="short-stories"
-                           />
+                           checked/>
                     <label class="tree-toggle-label"
                            for="short-stories">short stories</label>
 
@@ -30,7 +32,7 @@
                                 <a href="https://salta.studio/short-stories/find-it/">find it</a>
                             </li>
 
-                            <li >
+                            <li class="active">
                                 <a href="https://salta.studio/short-stories/the-shaman/">the shaman</a>
                             </li>
 
@@ -81,8 +83,15 @@
     <article>
 
         <div id="wrap">
-            <img src="/landscape.png" class="radial-fade" alt="SALTA Landscape" stye="display: block; max-width: 100%; width: 100%; height: auto;" />
+            
+        <object class="pdf-container" data="/the-shaman.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/the-shaman.pdf">Open the PDF</a>
+  </p>
+</object>
 
+    
         </div>
 
     </article>

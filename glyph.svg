@@ -1,0 +1,24 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 120 120"
+  role="img"
+  aria-label="SALTA glyph"
+>
+  <circle
+    cx="60"
+    cy="60"
+    r="46"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="6"
+  />
+
+  <rect
+    x="56"
+    y="28"
+    width="8"
+    height="48"
+    rx="4"
+    fill="currentColor"
+  />
+</svg>
