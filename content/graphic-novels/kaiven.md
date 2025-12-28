@@ -31,3 +31,33 @@ The cosmology of <span class="neo-latina-font">Kaíven</span> is developed throu
     <a href="/veyruun_1000_phrases.pdf">Open the PDF</a>
   </p>
 </object>
+
+# Ordic
+
+<object class="pdf-container" data="/ordic.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/ordic.pdf">Open the PDF</a>
+  </p>
+</object>
+
+<object class="pdf-container" data="/high-ordic.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/high-ordic.pdf">Open the PDF</a>
+  </p>
+</object>
+
+<object class="pdf-container" data="/middle-ordic.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/middle-ordic.pdf">Open the PDF</a>
+  </p>
+</object>
+
+<object class="pdf-container" data="/low-ordic.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/low-ordic.pdf">Open the PDF</a>
+  </p>
+</object>
