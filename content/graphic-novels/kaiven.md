@@ -48,6 +48,13 @@ The cosmology of <span class="neo-latina-font">Kaíven</span> is developed throu
   </p>
 </object>
 
+<object class="pdf-container" data="/high-ordic-words.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/high-ordic-words.pdf">Open the PDF</a>
+  </p>
+</object>
+
 <object class="pdf-container" data="/middle-ordic.pdf" type="application/pdf">
   <p>
     Your browser can’t display PDFs inline.
@@ -55,9 +62,23 @@ The cosmology of <span class="neo-latina-font">Kaíven</span> is developed throu
   </p>
 </object>
 
+<object class="pdf-container" data="/middle-ordic-words.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/middle-ordic-words.pdf">Open the PDF</a>
+  </p>
+</object>
+
 <object class="pdf-container" data="/low-ordic.pdf" type="application/pdf">
   <p>
     Your browser can’t display PDFs inline.
     <a href="/low-ordic.pdf">Open the PDF</a>
+  </p>
+</object>
+
+<object class="pdf-container" data="/low-ordic-words.pdf" type="application/pdf">
+  <p>
+    Your browser can’t display PDFs inline.
+    <a href="/low-ordic-words.pdf">Open the PDF</a>
   </p>
 </object>
