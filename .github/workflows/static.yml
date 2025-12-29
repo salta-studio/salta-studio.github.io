@@ -29,16 +29,7 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Prepare deploy directory
         run: |
-          mkdir -p deploy/children-books
-          mkdir -p deploy/fonts
-          mkdir -p deploy/graphic-novels
-          mkdir -p deploy/misc
-          mkdir -p deploy/short-stories
-          cp -r children-books/. deploy/children-books
-          cp -r fonts/. deploy/fonts
-          cp -r graphic-novels/. deploy/graphic-novels
-          cp -r misc/. deploy/misc
-          cp -r short-stories/. deploy/short-stories
+          mkdir -p deploy
           cp *.* deploy
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

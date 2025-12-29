@@ -1,121 +1,478 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://salta.studio/main.css?h=8db4bce025f3364de500">
-    <meta name="generator" content="Zola">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="https://latex.vercel.app/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js"
+      onload="renderMathInElement(document.body,{delimiters:[
+      {left:'$$',right:'$$',display:true},
+      {left:'$', right:'$', display:false}
+    ]});"
+    ></script>
+    <style>
+      table.booktabs {
+        border-collapse: collapse;
+      }
+
+      table.booktabs th,
+      table.booktabs td {
+        padding: 0.25rem 0.6rem;
+      }
+
+      table.booktabs th {
+        font-weight: 600;
+      }
+
+      table.booktabs td,
+      table.booktabs th {
+        border-left: none;
+        border-right: none;
+      }
+      @media (min-width: 900px) {
+        article.twocol {
+          column-count: 2;
+          column-gap: 2.2rem;
+        }
+
+        article.twocol h2,
+        article.twocol h3 {
+          break-after: avoid;
+        }
+        article.twocol figure,
+        article.twocol table {
+          break-inside: avoid;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .span-all {
+          column-span: all;
+        }
+      }
+
+      @media print {
+        thead {
+          display: table-header-group;
+        }
+      }
+      .neo-latina-font {
+        font-family: "Neo Latina";
+      }
+      .date {
+        text-align: center;
+      }
+      a img {
+        width: 20px;
+      }
+    </style>
     <title>SALTA Studio</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <img src="salta-logo.png" alt="SALTA Studio" />
+      <p class="author">noumena ashitaka hundimägi-mei</p>
+      <p class="date"><span id="today"></span></p>
+    </header>
 
-<main>
-    
-    
-        <nav>
-            <img src="https://salta.studio/salta-logo.png" alt="logo"/>
-                <button onclick="burger()" id="mobile" class="ms-Icon--GlobalNavButton" aria-label="Toggle navigation"></button>
-            <div id="trees">
-                <input class="tree-toggle" type="checkbox" id="short-stories"
-                           />
-                    <label class="tree-toggle-label"
-                           for="short-stories">short stories</label>
+    <main>
+      <section class="abstract span-all">
+        <h2>Abstract</h2>
+        <p>
+          I created SALTA Studio out of the (almost desperate) need to tell
+          stories. Once, I heard Alan Moore say that storytelling is almost
+          shamanic. That it was the shamans of the Paleolithic era who started
+          the tradition. I found that interesting, to say the least. I have many
+          unwritten stories. I have far fewer that are written. I promise you, I
+          have a brain full of useless information and somehow I still have room
+          for stories within stories. Of course, none of that means they're
+          good. They're great for me. And I can only hope someone else finds
+          hope, or at least warm feelings, when they read them. If you find
+          something useful here, feel free to let me know.
+          <br />
+          You can figure out how to reach me.
+          <br />
+          <em>You have my thanks</em>
+          <br />
+          <br />
+          <b>PS</b>:
+          <em
+            >If you feel like illustrating something, feel free. If you want
+            that but in a collaboration, hit me.</em
+          >
+        </p>
+      </section>
 
-                    <ul class="subtree">
-                        <li >
-                                <a href="https://salta.studio/short-stories/one/">one</a>
-                            </li>
+      <article class="twocol indent-pars text-justify">
+        <h2>1. Short Stories</h2>
+        <p>
+          A bunch of very short, badly written stories. Too personal, but I
+          dunno what else to write.
+        </p>
 
-                            <li >
-                                <a href="https://salta.studio/short-stories/find-it/">find it</a>
-                            </li>
+        <table class="borders-custom col-1-l col-2-c col-3-r booktabs">
+          <thead>
+            <tr class="border-top-thick border-bottom-thin">
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
 
-                            <li >
-                                <a href="https://salta.studio/short-stories/the-shaman/">the shaman</a>
-                            </li>
+          <tbody>
+            <tr>
+              <td>One</td>
+              <td></td>
+              <td>
+                <a href="one.pdf" target="_blank" alt="Teteo">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Find It</td>
+              <td></td>
+              <td>
+                <a href="find-it.pdf" target="_blank" alt="Teteo">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>The Shaman</td>
+              <td></td>
+              <td>
+                <a href="the-shaman.pdf" target="_blank" alt="Teteo">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Asgan</td>
+              <td></td>
+              <td>35%</td>
+            </tr>
+          </tbody>
 
-                            <li >
-                                <a href="https://salta.studio/short-stories/asgan/">asgan (~30%)</a>
-                            </li>
+          <tfoot>
+            <tr class="border-top-thin">
+              <td colspan="3">
+                <em
+                  >I have no idea why I call them short stories. They are short
+                  for sure.</em
+                >
+              </td>
+            </tr>
+          </tfoot>
+        </table>
 
-                            </ul>
-                <input class="tree-toggle" type="checkbox" id="children-books"
-                           />
-                    <label class="tree-toggle-label"
-                           for="children-books">children books</label>
+        <h2>2. Children Books</h2>
+        <p>
+          For some weird reason, I think kids could read my stories. Maybe
+          that's projection, but honestly, children can handle a lot more than
+          we adults assume.
+        </p>
 
-                    <ul class="subtree">
-                        <li >
-                                <a href="https://salta.studio/children-books/teteo/">teteo</a>
-                            </li>
+        <table class="borders-custom col-1-l col-2-c col-3-r booktabs">
+          <thead>
+            <tr class="border-top-thick border-bottom-thin">
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
 
-                            </ul>
-                <input class="tree-toggle" type="checkbox" id="graphic-novels"
-                           />
-                    <label class="tree-toggle-label"
-                           for="graphic-novels">graphic novels</label>
+          <tbody>
+            <tr class="border-bottom-thin">
+              <td>Teteo</td>
+              <td></td>
+              <td>
+                <a href="teteo.pdf" target="_blank" alt="Teteo">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+          </tbody>
 
-                    <ul class="subtree">
-                        <li >
-                                <a href="https://salta.studio/graphic-novels/kaiven/">kaíven (~12%)</a>
-                            </li>
+          <tfoot>
+            <tr class="border-top-thin">
+              <td colspan="3">
+                <em
+                  >Someone once told me my stories were too intense and obscure
+                  for children. I'm not so sure.</em
+                >
+              </td>
+            </tr>
+          </tfoot>
+        </table>
 
-                            <li >
-                                <a href="https://salta.studio/graphic-novels/medea/">medea</a>
-                            </li>
+        <h2>3. Graphic Novels</h2>
+        <p>
+          I collect graphic novels. I've tried writing a few over the years,
+          usually for the wrong reasons. Now I've started my own saga, and I’ve
+          got a couple ideas for one-off graphic novels too.
+        </p>
 
-                            <li >
-                                <a href="https://salta.studio/graphic-novels/waves/">waves</a>
-                            </li>
+        <table class="borders-custom col-1-l col-2-c col-3-r booktabs">
+          <thead>
+            <tr class="border-top-thick border-bottom-thin">
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
 
-                            </ul>
-                <input class="tree-toggle" type="checkbox" id="misc"
-                           />
-                    <label class="tree-toggle-label"
-                           for="misc">misc</label>
+          <tbody>
+            <tr>
+              <td>Kaíven</td>
+              <td>Chapter One</td>
+              <td>
+                <a href="kaive-gn.pdf" target="_blank" alt="Kaive Chapter One">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Medea</td>
+              <td>As Above So Below</td>
+              <td>
+                <a
+                  href="medea.pdf"
+                  target="_blank"
+                  alt="Medea As Above So Below"
+                >
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Waves</td>
+              <td>Echoes In The Sea</td>
+              <td>
+                <a
+                  href="waves.pdf"
+                  target="_blank"
+                  alt="Waves Echoes in the Sea"
+                >
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+          </tbody>
 
-                    <ul class="subtree">
-                        <li >
-                                <a href="https://salta.studio/misc/about/">about</a>
-                            </li>
+          <tfoot>
+            <tr class="border-top-thin">
+              <td colspan="3">
+                <em
+                  >Sometimes I think I should learn to draw or learn to direct
+                  animation. My artistic limitations frustrate me.</em
+                >
+              </td>
+            </tr>
+          </tfoot>
+        </table>
 
-                            <li >
-                                <a href="https://salta.studio/misc/latex-snippets/">latex snippets</a>
-                            </li>
+        <h2>4. Misc</h2>
+        <p>
+          These are LaTeX snippets for my stories and related notes and lore of
+          my cosmologies.
+        </p>
 
-                            </ul>
-                </div>
-        </nav>
-    <article>
+        <h3>4.1 Snippets</h3>
 
-        <div id="wrap">
-            <p>I created SALTA Studio out of the (<strong>almost desperate</strong>) need to tell stories. Once, I heard <em>Alan Moore</em> say that storytelling is almost shamanic. That it was the shamans of the Paleolithic era who started the tradition. I found that interesting, to say the least.</p>
-<p>I have many unwritten stories.</p>
-<p>I have far fewer that are written.</p>
-<p>I promise you, I have a brain full of useless information—and somehow I still have room for stories within stories.</p>
-<p>Of course, none of that means they're good.</p>
-<p>They're great for me.</p>
-<p>And I can only hope someone else finds hope, or at least warm feelings, when they read them.</p>
-<p>If you find something useful here, feel free to let me know. You can figure out how to reach me.</p>
-<br />
-<br />
-<p><strong>You have my thanks</strong>,</p>
-<p><em>noumena</em></p>
-<br />
-<br />
-<br />
-<br />
-<p><strong>PS</strong>: <em>If you feel like illustrating something, feel free. If you want that but in a collaboration, hit me.</em></p>
+        <figure>
+          <img src="dialogue.png" alt="Dialogue snippet" />
+          <figcaption>Figure 1: How I do dialogues.</figcaption>
+        </figure>
 
-        </div>
+        <figure>
+          <img src="graphic-novels.png" alt="Graphic Novel snippet" />
+          <figcaption>Figure 1: How I do panel, pages and captions.</figcaption>
+        </figure>
 
-    </article>
-</main>
+        <table class="borders-custom col-1-l col-2-c col-3-r booktabs">
+          <thead>
+            <tr class="border-top-thick border-bottom-thin">
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
 
+          <tbody>
+            <tr>
+              <td>Character Development</td>
+              <td>Cheatsheet</td>
+              <td>
+                <a
+                  href="character-development-sheet.pdf"
+                  target="_blank"
+                  alt="Veyruun"
+                >
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Book</td>
+              <td>Snippets</td>
+              <td>
+                <a href="book-template.pdf" target="_blank" alt="Veyruun">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+          </tbody>
 
-    <script type="text/javascript" src="https://salta.studio/elasticlunr.min.js" defer></script>
-    <script type="text/javascript" src="https://salta.studio/search_index.en.js?h=c49127f9db3804154554" defer></script>
-<script type="text/javascript" src="https://salta.studio/js.js?h=4dc92bffd1cd35c33565" defer></script>
+          <tfoot>
+            <tr class="border-top-thin">
+              <td colspan="3">
+                <em>Useful snippets to DRY my stuff</em>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
 
-</body>
+        <h3>4.2 Lore</h3>
+
+        <table class="borders-custom col-1-l col-2-c col-3-r booktabs">
+          <thead>
+            <tr class="border-top-thick border-bottom-thin">
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Veyruun</td>
+              <td>Cheatsheet</td>
+              <td>
+                <a href="veyruun.pdf" target="_blank" alt="Veyruun">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Veyruun</td>
+              <td>Common Phrases</td>
+              <td>
+                <a
+                  href="veyruun_1000_phrases.pdf"
+                  target="_blank"
+                  alt="Veyruun"
+                >
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Veyruun</td>
+              <td>Common Words</td>
+              <td>
+                <a href="veyruun_1000_words.pdf" target="_blank" alt="Veyruun">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Ordic</td>
+              <td>Cheatsheet</td>
+              <td>
+                <a href="ordic.pdf" target="_blank" alt="Veyruun">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>High Ordic</td>
+              <td>Common Words</td>
+              <td>
+                <a href="high-ordic-words.pdf" target="_blank" alt="Veyruun">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>High Ordic</td>
+              <td>Common Phrases</td>
+              <td>
+                <a href="high-ordic.pdf" target="_blank" alt="Veyruun">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Middle Ordic</td>
+              <td>Common Words</td>
+              <td>
+                <a href="middle-ordic-words.pdf" target="_blank" alt="Veyruun">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Middle Ordic</td>
+              <td>Common Phrases</td>
+              <td>
+                <a href="middle-ordic.pdf" target="_blank" alt="Veyruun">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Low Ordic</td>
+              <td>Common Words</td>
+              <td>
+                <a href="low-ordic-words.pdf" target="_blank" alt="Veyruun">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Low Ordic</td>
+              <td>Common Phrases</td>
+              <td>
+                <a href="low-ordic.pdf" target="_blank" alt="Veyruun">
+                  <img src="pdf.svg" />
+                </a>
+              </td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr class="border-top-thin">
+              <td colspan="3">
+                Notes: values are estimates, reality is a liar.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </article>
+    </main>
+    <script>
+      const el = document.getElementById("today");
+      const now = new Date();
+      el.textContent = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/Monterrey",
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }).format(now);
+    </script>
+  </body>
 </html>
