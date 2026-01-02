@@ -86,6 +86,13 @@
   {\itshape NARRATION: #1}\par
 }
 
+\newcommand{\Aeluun}[2]{
+\begin{center}
+  {\textit{#1}} \\
+  {\textit{\footnotesize{#2}}}
+\end{center}
+}
+
 % ---------- SFX ----------
 \NewDocumentCommand{\SFX}{ +m }{%
   {\bfseries SFX: \MakeUppercase{#1}}\par
@@ -396,14 +403,17 @@ On-screen: a scrolling list of names/callsigns, some blurred or corrupted, some 
 
 \Panel[FULL-BLEED ENDING BEAT]{The ship is nearly at the threshold. In the blackness, a hairline of something impossible: a faint geometry, like an edge, like a seam, a suggestion of a door inside the mouth of night.}
 
-\Caption{Vek zaar varm. / Let the dark come close.}
+\Caption{ \\
 
-\Caption{Se senar dornun zaar l\'{i}rserm. / Let it show me the edge of the world.}
+\Aeluun{Lo var delna.}{Let the dark come close.}
 
-\Caption{Kiv vekra mureš bol voš ve, za seun sarnra. / If there is a door hidden in the mouth of night, I will find it.}
+\Aeluun{Lo var na kaelle nor.}{Let it show me the edge of the world.}
 
-\Caption{Va za bolun tokra... / And I will knock...}
-	
+\Aeluun{Eth etheth silna varën, na eth kuul.}{If there is a door hidden in the mouth of night, I will find it.}
+
+\Aeluun{Ja na tal kaelna...}{And I will knock...}
+}	
+
 \end{GNPage}
 
 \end{document}
