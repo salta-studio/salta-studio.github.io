@@ -79,8 +79,8 @@
 }
 
 % ---------- Caption / Narration ----------
-\NewDocumentCommand{\Caption}{ +m }{%
-  {\itshape CAPTION: #1}\par
+\NewDocumentCommand{\Caption}{m m}{%
+  {\itshape CAPTION (#1): #2}\par
 }
 \NewDocumentCommand{\Narration}{ +m }{%
   {\itshape NARRATION: #1}\par
@@ -120,7 +120,7 @@
     \setlength{\topsep}{2pt}%
   }%
     \item
-      \IfValueT{#1}{\emph{(#1)}\par}
+      \IfValueT{#1}{\par}
       #3
   \end{list}%
 }
@@ -134,276 +134,240 @@
 
 \GNTitle{KA\'{I}VEN | Chapter One}{noumena ashitaka hundim\"{a}gi-mei}[Draft \small{(v0.1)} - \today]
 
-\Env{EXT. SPACE CLOSE TO BLACKHOLE}
-
 \begin{GNPage}[THE MOUTH OF NIGHT]
 
 
-\Panel[WIDE, ESTABLISHING]{\textbf{Exterior}. The ship hangs like a wounded insect in the dark. Plates peeled back. Scars of plasma burns. One engine dead, another coughing blue.\\
-	Ahead: a \textbf{gargantuan black hole}, not just darkness but a presence an eye without eyelids. The accretion disk smears light into a bright, violent halo. Distant debris arcs inward like prayer beads being pulled from a snapped string.}
+\Panel[WIDE / EXTERIOR]{Wrecked ship against a gargantuan black hole. Accretion disk like a burning crown. Light warps.}
 
-\Caption{We have run so long that even the stars feel tired of watching us.}
+\Caption{ZÁALI}{We have run so long that even the stars feel tired of watching us.}
 
-\Caption{The ship is ruined, its bones cracked, its skin torn, and there is no kindly harbor in the void.}
+\Caption{ZÁALI}{The ship is ruined, its bones cracked, its skin torn, and there is no kindly harbor in the void.}
 
-\Panel[INTERIOR, WIDE]{\textbf{Bridge.} The crew of six. Exhaustion is everywhere: slumped shoulders, trembling hands, bruises under eyes, dried blood at someone's hairline. Consoles flicker with dying light. A warning klaxon is either silent now or too constant to notice.\\
+\Panel[INTERIOR / BRIDGE WIDE]{Crew slumped. Consoles flicker. ZÁALI stands, rigid, hands braced as if holding reality steady.}
 
-Only Z\'{A}ALI is upright, facing forward, hands on the console like he's holding the world in place.}
+\Caption{ZÁALI}{They trusted me. That is the sharpest thing in the room.}
 
-\Caption{They trusted me. That is the sharpest thing in the room.}
+\Panel[DETAILS / SYSTEM READOUT]{Cracked screen: HULL 12\%. Failing seals.}
 
-\Caption{Not the alarms. Not the heat bleeding from the vents. Not even the black mouth waiting outside.}
+\Caption{ZÁALI}{How many times can a man make the same choice and still call it bravery?}
 
-\Panel[CLOSE-UP: DAMAGE / DETAILS]{A cracked screen shows: \textbf{HULL INTEGRITY: 12\%}.
-A manual patch welded over a breach. A leaking cable sparking. A tiny photo or token taped beside a gauge, something human and stubborn.}
+\Caption{ZÁALI}{How many times can he lead others into fire and name it \textbf{the only way}?}
 
-\Caption{How many times can a man make the same choice and still call it bravery?}
+\Panel[CLOSE-UP / CREW FACES]{Silent tears. Tremors. Someone’s hand hovering near an eject lever.}
 
-\Caption{How many times can he lead others into fire and name it \textbf{the only way}?}
+\Caption{ZÁALI}{I wanted a simpler life once.}
 
-\Panel[CLOSE-UP: CREW FACES, ONE BY ONE]{
-Quick cuts:
+\Caption{ZÁALI}{A house. A door that locks. Mornings that mean bread and not battle.}
 
-\begin{itemize}
-  \item One crew member asleep upright, jaw clenched like resisting a nightmare.
-  \item Another quietly crying without sound.
-  \item Someone's hand hovering over an eject lever, then falling away.
-  \item Someone's staring at the black hole on the forward display as if looking at an old god.
-\end{itemize}
-}
+\Caption{ZÁALI}{But I stepped onto this road, again, and again, and each time I told myself it was the last.}
 
-\Caption{I wanted a simpler life once. I remember that version of me like a half-forgotten song.}
+\Panel[LOW ANGLE / ZÁALI + WINDOW]{Black hole swollen larger.}
 
-\Caption{A house. A door that locks. Mornings that mean bread and not battle.}
+\Caption{ZÁALI}{Why do I keep doing this?}
 
-\Caption{But I stepped onto this road, again, and again, and each time I told myself it was the last.}
+\Caption{ZÁALI}{Why does it feel... like repeating?}
 
-\Panel[INTERIOR, LOW ANGLE ON PROTAGONIST / FORWARD WINDOW]{The forward window dominates. The black hole swells larger now, a slow certainty. Light bends wrong. The ship is being \textit{drawn}, not by engines, but by fate wearing physics as a mask. Z\'{A}ALI's face is lit by the warped glow-half saint, half criminal.}
+\Panel[FULL-BLEED / EXTERIOR]{Ship tiny, being drawn in. Stars smear.}
 
-\Caption{Why do I keep doing this?}
+\Caption{ZÁALI}{As if some unseen hand has set the pieces upon the board before I ever touch them.}
 
-\Caption{Why does it feel... not like living... but like repeating?}
+\Caption{ZÁALI}{As if the world has grooves worn into it, and my feet find them no matter how I fight.}
 
-\Caption{As if some unseen hand has set the pieces upon the board before I ever touch them.}
-
-\Caption{As if the world has grooves worn into it, and my feet find them no matter how I fight.}
-
-\Panel[FULL-BLEED, COSMIC / SURREAL]{The ship tiny against the black hole's majesty. The accretion disk looks like a burning crown. The stars behind smear into thin lines, as though reality itself is being combed toward the dark. In the chaos, there is a strange calm like a theater right before the curtain falls.}
-
-\Caption{I tell myself I am choosing.}
-
-\Caption{I tell myself there is meaning in the struggle, and honor in the scars.}
-
-\Caption{But some nights, like this one, I swear I can hear the machinery behind the sky.}
-
-\Caption{A faint clicking. A silent counting.}
-
-\Caption{And the cruelest thought of all is this:}
-
-\Caption{If this ends the way it always ends... then what, in the name of all the lights that ever were, was I meant to learn?}
+\Caption{ZÁALI}{If this ends the way it always ends... then what, in the name of all the lights that ever were, was I meant to learn?}
 
 \end{GNPage}
 
-\begin{GNPage}[THE WEIGHT OF LIVING]
+\begin{GNPage}[A SMALL GRAVE]
 
-\Panel[WIDE, INTERIOR / BRIDGE]{The bridge is dim, lit by failing consoles and the warped glow from the black hole. The crew are present but distant, like ghosts still operating machinery out of habit. Micro-debris ticks softly against the hull.}
+\Panel[WIDE / PARK]{A modest park. Trees. A bench. Summer light. At the edge, a patch of dirt turned over.}
 
-\Caption{Pain is not a stranger. It is the oldest crewman aboard every ship I have ever flown.}
+\Caption{ZÁALI}{Pain is not a stranger. It is the oldest crewman aboard every ship I have ever flown.}
 
-\Caption{It sits quietly in the corner while we laugh, and it does not laugh with us.}
+\Panel[MEDIUM / YOUNG ZÁALI]{ZÁALI, 6 years old, kneeling with a small shovel. Dirt on his hands, cheeks wet. Beside him: a small bundle wrapped in cloth, his dog.}
 
-\Panel[MEDIUM, MONTAGE DETAIL]{A small \textbf{ordinary} detail amid catastrophe: a dented mug floating in low gravity, a charm tied to a console; a torn sleeve stitched with crude thread.}
+\Caption{ZÁALI}{It sits quietly in the corner while we laugh, and it does not laugh with us.}
 
-\Caption{It watches us eat, and sleep, and make promises we do not understand the cost of.}
+\Panel[DETAIL]{His tiny fingers press earth down gently, like tucking someone in.}
 
-\Caption{Then, when the alarms begin, it rises as if it has been waiting for its proper work.}
+\Caption{ZÁALI}{It watches us eat, and sleep, and make promises we do not understand the cost of.}
 
-\Panel[WIDE, EXTERIOR / SHIP AGAINST THE HOLE]{The ship is tiny. The black hole is not \textbf{big}, it's unfair. Light arcs like frightened animals. The accretion disk burns like a crown of judgment.}
+\Panel[MEDIUM / THE OLD MAN ENTERS]{A mysterious old man stands a few steps away, simple clothes, unassuming, but somehow too still for the world. No sinister vibe. Just weight.}
 
-\Caption{They tell you existence is a gift.}
+\Caption{ZÁALI}{Then, when the alarms begin, it rises as if it has been waiting for its proper work.}
 
-\Caption{If so, it is a gift wrapped in thorns, and the blood on the ribbon is usually yours.}
+\Panel[TWO-SHOT / OLD MAN + CHILD]{The old man crouches to ZÁALI’s level. Gentle distance.}
 
-\Panel[CLOSE-UP, PROTAGONIST'S FACE / REFLECTION]{Close on Z\'{A}ALI's eyes, wet with exhaustion but not with surrender. In the glass of the forward viewport, the black hole distorts his reflection into something older.}
+\Dialogue{OLD MAN}{What was his name?}
 
-\Caption{I have crossed a hundred skies. I have tasted a hundred triumphs.}
+\Panel[CLOSE-UP / YOUNG ZÁALI]{ZÁALI looks up, watery eyes, throat tight, can’t answer. His mouth opens but no sound comes.}
 
-\Caption{None of them were clean.}
+\Caption{ZÁALI}{They tell you existence is a gift.}
 
-\Panel[MONTAGE STRIP, THREE QUICK IMAGES IN ONE PANEL OR THREE TIGHT PANELS]{A rapid memory montage:\\
+\Caption{ZÁALI}{If so, it is a gift wrapped in thorns, and the blood on the ribbon is usually yours.}
 
-A past victory: the crew laughing under alien lanterns.\\
+\Panel[MEDIUM / OLD MAN, SOFT]{The old man’s expression is calm, tender, certain in a way that’s almost frightening because it’s kind.}
 
-The same place later: scorched metal, bodies covered.\\
+\Dialogue{OLD MAN}{I understand your pain.
 
-Z\'{A}ALI alone, staring at his hands as if they're guilty.}
+You will see them again... your dogs.
 
-\Caption{Victory is only a word we use when grief has not yet caught up.}
+Just not in the way you probably expect.
 
+You are too young to understand... but time will show you.}
 \end{GNPage}
 
-\begin{GNPage}[THE LEDGER OF THE LOST]
+\begin{GNPage}[BACK TO THE SHIP]
 
-\Panel[CLOSE-UP, HANDS / LIST]{Z\'{A}ALI's gloved hand hovers over a console. \\
-On-screen: a scrolling list of names/callsigns, some blurred or corrupted, some struck through.}
-\Caption{I remember faces the way sailors remember storms: not by name, but by what they took.}
+\Panel[INTERIOR / BRIDGE]{A jolt. Sparks. Crew brace.}
 
-\Panel[FLASHBACK, MEDIUM]{A crew member, younger, grinning mid-sentence-caught in a candid moment.}
+\Caption{ZÁALI}{I have crossed a hundred skies. I have tasted a hundred triumphs.}
 
-\Caption{A smile that went out mid-sentence.}
+\Caption{ZÁALI}{None of them were clean.}
 
-\Panel[FLASHBACK, ACTION SNAPSHOT]{Chaos: a breach, decompression, a hand reaching through smoke and frost toward Z\'{A}ALI.}
+\Panel[EXTERIOR / SHIP]{Ship tumbling slightly as gravity pulls.}
 
-\Caption{A hand reaching for mine and finding only emptiness.}
+\Caption{ZÁALI}{Victory is only a word we use when grief has not yet caught up.}
 
-\Panel[FLASHBACK, QUIET HORROR]{A helmet tumbles slowly through space, turning end over end. In its visor: a frozen reflection of stars.}
+\Panel[MONTAGE]{Overlay images like memory shards: a helmet spinning in space, a hand slipping away, a body wrapped and sent outward.}
 
-\Caption{A voice cut short, like a song struck from the throat.}
+\Caption{ZÁALI}{I remember faces the way sailors remember storms.}
 
-\Panel[WIDE, FUNERAL THAT ISN'T A FUNERAL]{The crew eject a wrapped body into space because there is nowhere to bury anyone. No ceremony, only silence and the indifferent starlight.}
+\Caption{ZÁALI}{A smile that went out.}
 
-\Caption{I have buried companions in places that do not allow graves.}
+\Caption{ZÁALI}{A hand reaching for mine... only emptiness.}
 
-\Caption{I have left them drifting where no planet will ever claim them.}
+\Panel[CLOSE-UP / ZÁALI’S HANDS]{His hands tremble, then steady.}
 
-\Panel[INTERIOR, PRESENT / BRIDGE, CREW IN FRAME]{Back to the broken bridge. The crew are alive, barely, and Z\'{A}ALI looks at them as if counting blessings he doesn't deserve.}
+\Caption{ZÁALI}{I have buried companions in places that do not allow graves.}
 
-\Caption{I have watched light itself bend around their dying, and still it did not make it holy.}
+\Caption{ZÁALI}{I have left them drifting where no planet will ever claim them.}
 
-\Caption{It is a strange thing, to be called \textbf{leader}, when all your path is marked by those who followed you and did not return.}
+\Panel[CLOSE-UP / CREW MEMBER]{A crew member, awake now, staring at ZÁALI as if asking without words: why again?}
 
-\Caption{Some nights I wonder if I am not a captain at all, only a collector of endings.}
+\Caption{ZÁALI}{It is a strange thing, to be called \textbf{leader}, when all your path is marked by those who followed you and did not return.}
 
-\Caption{And the worst of it is not that I lost them.}
+\Panel[WINDOW / BLACK HOLE]{The black hole now dominates.}
 
-\Caption{The worst of it is that I can still feel them, like phantom limbs of the soul, aching where they used to be.}
+\Caption{ZÁALI}{Some nights I wonder if I am a collector of endings.}
+
+\Caption{ZÁALI}{And the worst of it is not that I lost them.}
+
+\Caption{ZÁALI}{The worst of it is that I can still feel them... aching where they used to be.}
 
 \end{GNPage}
 
 
-\begin{GNPage}[THE ONES WHO COME BACK WRONG]
+\begin{GNPage}[THE OLD MAN LEAVES]
 
-\Panel[WIDE, STRANGE, DREAMLIKE]{A surreal montage panel: Z\'{A}ALI in a corridor that feels half-ship, half-memory. The lighting is wrong. The perspective subtly impossible.}
+\Panel[MEDIUM / OLD MAN STANDS]{The old man rises with effort that looks performed like he’s pretending to be old.}
 
-\Caption{There are losses you can accept: the swift, clean kind, where the universe is merely cruel.}
+\Caption{ZÁALI}{There are losses you can accept: the swift, clean kind, where the universe is merely cruel.}
 
-\Caption{And then there are the other losses, the ones that return.}
+\Panel[DETAIL / YOUNG ZÁALI’S FACE]{Z'AALI’s grief shifts into confusion, hope intruding like an unfamiliar guest.}
 
-\Panel[MONTAGE]{A bustling spaceport crowd. Z\'{A}ALI sees someone with a familiar posture, same stance as a dead friend, but in a totally different body: different age, different species, different fashion.}
+\Caption{ZÁALI}{And then there are the other losses... the ones that return.}
 
-\Caption{They do not return as they were.}
+\Panel[WIDE / THE PARK PATH]{The old man begins walking away along the path. Sunlight behind him.}
 
-\Caption{A familiar laugh in a stranger's mouth.}
+\Dialogue{YOUNG ZÁALI}{...I’ll see him again?}
 
-\Panel[MONTAGE]{A marketplace. Z\'{A}ALI catches a gaze, recognition flashes like lightning, then the person turns away, expression empty, moving on.}
+\Panel[OVER-SHOULDER / OLD MAN, NOT TURNING AROUND]{The old man does not look back... like looking back would break a rule.}
 
-\Caption{A gaze that once knew you, now sliding past as if you are smoke.}
+\Dialogue{OLD MAN}{Yes}
 
-\Panel[MONTAGE, NEAR-MISS]{A door closes. Z\'{A}ALI arrives one second too late. A departing shuttle lifts off. He stands beneath its exhaust wash like someone being erased.}
+\Panel[SURREAL HINT / CHILD POV]{For a moment, the world feels subtly wrong: a bird freezes for a fraction, leaves hang too still, the old man’s outline \textbf{double-exposes} as if time stuttered.}
 
-\Caption{I have found them again, sometimes years later, sometimes worlds away, and I have missed them by a single choice, a single hour, a single wrong door.}
+\Caption{ZÁALI}{They do not return as they were.}
 
-\Panel[WIDE, SEARCH ACROSS WORLDS]{A cosmic travel montage: different planets, different moons, different ruins; Z\'{A}ALI always arriving after the fact. His silhouette repeats like a cursed refrain.}
+\Caption{ZÁALI}{A familiar laugh in a stranger’s mouth.}
 
-\Caption{Do you know what it is to search for a person across the breadth of the cosmos, armed only with grief and intuition?}
+\Caption{ZÁALI}{A gaze that once knew you, now sliding past as if you are smoke.}
 
-\Caption{To see a silhouette in a crowd and feel your heart lunge like a dog straining at the leash only to be disappointed, again.}
+\Panel[MEDIUM / YOUNG ZÁALI ALONE]{ZÁALI kneels by the small grave, staring after the old man. The park feels larger now, as if it contains an infinite distance.}
 
-\Panel[CLOSE-UP, THE NAME FALLS]{Z\'{A}ALI speaks a name (we don't show the word balloon clearly; we can crop it or blur it), and the stranger looks at him kindly, politely, without recognition.}
-
-\Caption{To speak a name you are not sure you are allowed to speak, and watch it fall to the floor between you like a dead thing.}
-
-\Caption{They look at me with polite eyes and do not know why my voice breaks.}
-
-\Caption{They do not remember the promises we made under burning moons.}
-
-\Caption{They do not remember dying for me.}
-
-\Caption{And I... I remember too much.}
+\Caption{ZÁALI}{ I remember too much.}
 
 \end{GNPage}
 
-\begin{GNPage}[THE SHAPE OF THE WAR BEYOND THIS WAR]
+\begin{GNPage}[THE SEARCH BEGINS]
 
-\Panel[PRESENT, SHIP SHUDDERS]{The ship groans. Panels peel back. A cable whips in slow-motion. The black hole's pull is now undeniable, everyone feels the tilt of reality.}
+\Panel[MONTAGE / SPACEPORT CROWD]{Adult ZÁALI in a crowd on a distant world. He spots someone with a familiar posture.}
 
-\Caption{A man can endure hardship. He can even endure horror.}
+\Caption{ZÁALI}{I have found them again. Sometimes years later. Sometimes worlds away.}
 
-\Caption{What breaks him is the pattern.}
+\Panel[MONTAGE / NEAR-MISS DOOR]{A door closes. ZÁALI arrives late.}
 
-\Panel[VISUAL METAPHOR, THE PATTERN]{A montage of repeated scenes in different contexts: the same hand reaching, the same alarm light, the same goodbye like d\'{e}j\`{a} vu rendered as imagery.}
+\Caption{ZÁALI}{...and I have missed them by a single choice, a single hour, a single wrong door.}
 
-\Caption{The sense that suffering is not an accident, but a design.}
+\Panel[MONTAGE / DIFFERENT LIFE]{A person laughs, same laugh as someone we saw die earlier, but in a different face.}
 
-\Caption{That someone, somewhere, decided pain would be the price of being.}
+\Caption{ZÁALI}{Do you know what it is to search for a person across the breadth of the cosmos, armed only with grief and intuition?}
 
-\Panel[COSMIC POV, SOMETHING LOOKS BACK]{The black hole is framed like an eye. The starfield warps into something that resembles a staring face for a moment, just long enough to unsettle.}
+\Panel[MONTAGE / SILHOUETTE]{A silhouette in rain and neon. ZÁALI’s heart in his throat. It’s not them.}
 
-\Caption{I have stared into the dark long enough to suspect it stares back.}
+\Caption{ZÁALI}{To see a silhouette in a crowd and feel your heart lunge like a dog straining at the leash only to be disappointed, again.}
 
-\Caption{As the Architect, you were not meant to have any knowledge of his existence; for his name was withheld, and his being kept from your sight.}
+\Panel[MONTAGE / THE NAME FALLS]{ZÁALI speaks a name (balloon cropped). The stranger smiles politely. No recognition.}
 
-\Panel[THE SEAMS]{Z\'{A}ALI's gloved fingers touch the forward glass or a holo-map; the image briefly glitches, angles that don't make sense, lines repeating, star positions snapping like a grid.}
+\Caption{ZÁALI}{To speak a name you are not sure you are allowed to speak, and watch it fall to the floor between you like a dead thing.}
 
-\Caption{There are days I feel the seams of the world beneath my fingertips.}
+\Panel[BACK TO PRESENT / BRIDGE]{Adult ZÁALI on the bridge again, eyes hollowed by years.}
 
-\Caption{Thin places. Wrong angles. Moments that repeat with a familiar cadence as if the cosmos has favorite lines.}
+\Caption{ZÁALI}{They do not remember dying for me.}
 
-\Panel[PRESENT, THE REALIZATION RETURNS]{The crew in the background: one asleep, one praying, one shaking, one furious. Z\'{A}ALI is still, listening to something nobody else hears.}
+\Caption{ZÁALI}{And I... I remember too much.}
 
-\Caption{And I know. I know in the marrow of me, that there will be another battle after this one.}
+\end{GNPage}
 
-\Panel[THE TRUE ENEMY]{A shadowy suggestion: not a person, not a monster, more like a structure behind reality. Could be geometric shapes, looming silhouettes in the distortion, or symbols hidden in the gravitational lensing.}
+\begin{GNPage}[THE ARCHITECT]
 
-\Caption{Not against raiders, nor tyrants, nor the thousand petty empires that rise and rot among the stars.}
+\Panel[SHIP SHUDDERS]{Reality leans.}
 
-\Caption{But against the hands that set the rules of the game and call it \textbf{reality}.}
+\Caption{ZÁALI}{What breaks him is the pattern.}
 
-\Caption{Against the ones who made cruelty feel inevitable.}
+\Panel[VISUAL PATTERN MONTAGE]{Repeated imagery across time: the same reaching hand, the same farewell, the same red warning light, like the cosmos has a template.}
 
-\Caption{I do not speak their names. Names have power, and I cannot afford to give them more.}
+\Caption{ZÁALI}{The sense that suffering is not an accident, but a design.}
 
-\Caption{Yet even here, with a black hole waiting like a mouth, I feel the old summons returning.}
+\Panel[BLACK HOLE AS EYE]{Frame the hole like an eye. Let the lensing look like a face for a heartbeat.}
 
-\Caption{The road opening beneath my feet.}
+\Caption{ZÁALI}{I have stared into the dark long enough to suspect it stares back.}
 
-\Caption{The wheel turning.}
+\Panel[THE “SEAM”]{A nav-map glitches into impossible geometry. A faint grid behind the stars only for a moment.}
 
-\Caption{Because it always turns.}
+\Caption{ZÁALI}{There are days I feel the seams of the world beneath my fingertips.}
+
+\Panel[ZÁALI’S DECISION]{He stands straighter. Crew sense it.}
+
+\Caption{ZÁALI}{And I know... that there will be another battle after this one.}
+
+\Panel[HINT OF A GREATER WAR]{A symbolic panel: nine distant points of light arranged not like stars but like chosen placement. Or nine “shadows” implied in the lensing.}
+
+\Caption{ZÁALI}{against the hands that set the rules of the game and call it existence.}
 
 \end{GNPage}
 
 \begin{GNPage}[THE VOW]
 
-\Panel[QUIET, CREW IN STILLNESS]{The crew are frozen in that strange end-of-everything calm. One person's hand rests on another's shoulder. No speeches. Just breathe.}
+\Panel[CREW QUIET]{A hand on a shoulder. Exhaustion as intimacy.}
 
-\Caption{If I were wise, I would let the dark take us gently.}
+\Caption{ZÁALI}{If I were wise, I would let the dark take us gently.}
 
-\Caption{I would let my bones rest. I would let my mind fall silent.}
+\Panel[TEMPTATION OF REST]{Peaceful composition poisoned by the black hole’s edge.}
 
-\Panel[THE TEMPTATION OF PEACE]{A panel that almost looks peaceful: stars like snow, the ship like a cradle then the edge of the black hole intrudes like a blade.}
+\Caption{ZÁALI}{But I cannot.}
 
-\Caption{I would stop trying to bargain with fate as if fate had ever once been fair.}
+\Panel[FLASHBACK MICRO-BEAT]{Tiny insert panel: young ZÁALI’s wet eyes. The old man’s voice echoes.}
 
-\Caption{But I cannot.}
+\Dialogue{OLD MAN}{You will see them again...}
 
-\Panel[MONTAGE THREAD RETURNS]{A montage of the crew across other lives: same eyes in different faces; the same gesture repeated across time. Keep it subtle, felt, not explained.}
+\Panel[ZÁALI RISES]{He becomes something sharper.}
 
-\Caption{Not while there is even a single thread that might be pulled loose.}
+\Caption{ZÁALI}{And if suffering is the law, then I will become its heresy.}
 
-\Caption{Not while the ones I love keep slipping through my hands and returning to me as strangers.}
+\Panel[FULL-BLEED / DOOR IN THE DARK]{In the blackness: a hairline seam, like a doorframe made of nothing.}
 
-\Panel[THE HERESY]{Z\'{A}ALI rises. The posture changes: from exhausted survivor to someone making a decision with teeth. The black hole glow crowns him in warped light.}
-
-\Caption{Not while the cosmos pretends it is innocent.}
-
-\Caption{I have bled for this existence. We all have.}
-
-\Caption{And if suffering is the law, then I will become its heresy.}
-
-\Panel[FULL-BLEED ENDING BEAT]{The ship is nearly at the threshold. In the blackness, a hairline of something impossible: a faint geometry, like an edge, like a seam, a suggestion of a door inside the mouth of night.}
-
-\Caption{ \\
+\Caption{
 
 \Aeluun{Lo var delna.}{Let the dark come close.}
 
