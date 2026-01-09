@@ -130,9 +130,33 @@
   {\itshape (beat)}\par
 }
 
+\newcommand{\dedication}[1]{%
+  \cleardoublepage
+  \thispagestyle{empty}
+  \vspace*{\fill}
+  \begin{center}\textit{#1}\end{center}
+  \vspace*{\fill}
+  \cleardoublepage
+}
+
+\newcommand{\lyrics}[1]{%
+  \begin{center}
+  	\small (\scriptsize ( \tiny \textit{#1} \scriptsize )\small )
+  \end{center}
+}
+
 \begin{document}
 
 \GNTitle{KA\'{I}VEN | Chapter One}{noumena ashitaka hundim\"{a}gi-mei}[Draft \small{(v0.1)} - \today]
+
+\dedication{
+sa \\
+helna varë \\
+helna nü\\
+sa elën\\
+jää kai\\
+silna na
+}
 
 \begin{GNPage}[THE MOUTH OF NIGHT]
 
@@ -152,6 +176,8 @@
 \Caption{ZÁALI}{How many times can a man make the same choice and still call it bravery?}
 
 \Caption{ZÁALI}{How many times can he lead others into fire and name it \textbf{the only way}?}
+
+\lyrics{caminos largos sin un final}
 
 \Panel[CLOSE-UP / CREW FACES]{Silent tears. Tremors. Someone’s hand hovering near an eject lever.}
 
@@ -187,6 +213,8 @@
 
 \Caption{ZÁALI}{It sits quietly in the corner while we laugh, and it does not laugh with us.}
 
+\lyrics{sabor a silencio en cada rincón, grita el vacío de mi corazón}
+
 \Panel[DETAIL]{His tiny fingers press earth down gently, like tucking someone in.}
 
 \Caption{ZÁALI}{It watches us eat, and sleep, and make promises we do not understand the cost of.}
@@ -214,6 +242,7 @@ You will see them again... your dogs.
 Just not in the way you probably expect.
 
 You are too young to understand... but time will show you.}
+
 \end{GNPage}
 
 \begin{GNPage}[BACK TO THE SHIP]
@@ -317,6 +346,8 @@ You are too young to understand... but time will show you.}
 
 \Caption{ZÁALI}{And I... I remember too much.}
 
+\lyrics{en la sombra se esconden verdades... te busco en el aire en mil paisajes}
+
 \end{GNPage}
 
 \begin{GNPage}[THE ARCHITECT]
@@ -345,6 +376,8 @@ You are too young to understand... but time will show you.}
 
 \Caption{ZÁALI}{against the hands that set the rules of the game and call it existence.}
 
+\lyrics{dime ¿dónde va lo que no se dice? ¿se pierde, se queda o cicatriza?}
+
 \end{GNPage}
 
 \begin{GNPage}[THE VOW]
@@ -369,14 +402,16 @@ You are too young to understand... but time will show you.}
 
 \Caption{
 
-\Aeluun{Lo var delna.}{Let the dark come close.}
+\center \textit{Lo var delna.}
 
-\Aeluun{Lo var na kaelle nor.}{Let it show me the edge of the world.}
+\textit{Lo var na kaelle nor.}
 
-\Aeluun{Eth etheth silna varën, na eth kuul.}{If there is a door hidden in the mouth of night, I will find it.}
+\textit{Eth etheth silna varën, na eth kuul.}
 
-\Aeluun{Ja na tal kaelna...}{And I will knock...}
+\textit{Ja na tal kaelna...}
 }	
+
+\lyrics{cada sombra guarda un secreto pero mi sombra ya no tiene miedo}
 
 \end{GNPage}
 
